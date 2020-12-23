@@ -1,14 +1,8 @@
 import React from 'react'
-import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import Layout from '../components/Layout'
 
-const App = () => {
-	const { title, description } = useSiteMetadata()
-	return (
-		<>
-		  <h1>{title}</h1>
-		  <p>{description}</p>
-		</>
-	  )
-}
+const App = () => (
+	<Layout />
+)
 
 export default App
