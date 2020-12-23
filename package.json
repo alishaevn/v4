@@ -2,7 +2,7 @@
 	"name": "alisha-evans-personal-site",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "gatsby develop -p 9988 -o"
+		"start": "gatsby develop -p 9988 -o"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
