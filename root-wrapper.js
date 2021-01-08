@@ -1,7 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/oceanicNext'
 import React from 'react'
+import Code from './src/components/Code'
 
 const components = {
 	h2: ({ children }) => (
@@ -10,40 +9,19 @@ const components = {
 	'p.inlineCode': props => (
 		<code style={{ backgroundColor: 'lightgray' }} {...props} />
 	),
-	pre: props => {
-		const className = props.children.props.className || ''
-		const matches = className.match(/language-(?<lang>.*)/)
-		const code = props.children.props.children.trim()
-		const language = matches && matches.groups && matches.groups.lang
-			? matches.groups.lang
-			: ''
+	pre: ({ children: { props } }) => {
+		const codeString = props.children.trim()
+		const language = props.className && props.className.replace('language-', '')
 
-		return (
-			<Highlight
-				{...defaultProps}
-				code={code}
-				language={language}
-				theme={theme}
-			>
-				{({
-					className,
-					getLineProps,
-					getTokenProps,
-					style,
-					tokens,
-				}) => (
-					<pre className={className} style={style}>
-						{tokens.map((line, i) => (
-							<div {...getLineProps({ line, key: i })}>
-								{line.map((token, key) => (
-									<span {...getTokenProps({ token, key })} />
-								))}
-							</div>
-						))}
-					</pre>
-				)}
-			</Highlight>
-		)
+			if (props.mdxType === 'code') {
+				return (
+				  <Code
+					codeString={codeString}
+					language={language}
+					{...props}
+				  />
+				);
+			  }
 	}
 }
 
