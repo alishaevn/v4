@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './styles'
 
 const Dump = props => (
 	<div
@@ -15,16 +16,3 @@ const Dump = props => (
 )
 
 export default Dump
-
-const styles = {
-	container: {
-		fontSize: 20,
-		border: '1px solid #efefef',
-		padding: 10,
-		background: 'white',
-	},
-	key: {
-		color: 'white',
-		background: 'red',
-	},
-}

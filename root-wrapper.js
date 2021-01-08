@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
-import Code from './src/components/Code'
+import Code from './src/components/Code/index'
 
 const components = {
 	h2: ({ children }) => (
