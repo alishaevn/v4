@@ -1,18 +1,24 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
+
+const IndexWrapper = styled.main``
+const PostWrapper = styled.div``
 
 const App = ({ data }) => (
 	<Layout>
-		{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
-			<div key={id}>
-				<Link to={fields.slug}>
-					<h1>{frontmatter.title}</h1>
-					<p>{frontmatter.date}</p>
-					<p>{excerpt}</p>
-				</Link>
-			</div>
-        ))}
+		<IndexWrapper>
+			{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
+				<PostWrapper key={id}>
+					<Link to={fields.slug}>
+						<h1>{frontmatter.title}</h1>
+						<p>{frontmatter.date}</p>
+						<p>{excerpt}</p>
+					</Link>
+				</PostWrapper>
+			))}
+		</IndexWrapper>
 	</Layout>
 )
 
