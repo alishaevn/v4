@@ -51,7 +51,7 @@ export const query = graphql`
 				fields { slug }
 				frontmatter {
 					title
-					date(formatString: "MMMM Do YYYY")
+					date(formatString: "MMMM DD, YYYY")
 					cover {
 						publicURL
 						childImageSharp {
