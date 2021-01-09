@@ -1,6 +1,7 @@
 import React from 'react'
 import useSiteMetadata from '../../hooks/useSiteMetadata'
 import Header from '../Header/index'
+import { AppStyles } from './styles'
 
 const Layout = ({ children }) => {
 	const { title, description } = useSiteMetadata()

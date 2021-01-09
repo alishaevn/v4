@@ -1,9 +1,25 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/oceanicNext'
 import React from 'react'
+import {
+	LiveEditor,
+	LiveError,
+	LivePreview,
+	LiveProvider,
+  } from 'react-live'
 import { LineNo, Pre } from './styles'
 
-const Code = ({ codeString, language }) => {
+const Code = ({ codeString, language, ...props }) => {
+	if (props['react-live']) {
+		return (
+		  <LiveProvider code={codeString} noInline={true} theme={theme}>
+			<LiveEditor />
+			<LiveError />
+			<LivePreview />
+		  </LiveProvider>
+		)
+	}
+
 	return (
 		<Highlight
 			{...defaultProps}

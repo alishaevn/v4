@@ -14,9 +14,7 @@ Here is the `Dump` component!
 console.log(`hello world`)
 ```
 
-```jsx
-import React from 'react'
-
+```jsx react-live
 const Dump = props => (
   <div
     style={{
@@ -36,5 +34,5 @@ const Dump = props => (
   </div>
 )
 
-export default Dump
+render(<Dump prop={['this is a string']}/>)
 ```
