@@ -4,29 +4,27 @@ const siteMetadata = {
 }
 
 module.exports = {
-	siteMetadata: {
-		title: `The Localhost Blog`,
-		description: `This is my coding blog where I write about my coding journey.`,
-	},
+	siteMetadata: siteMetadata,
 	plugins: [
-		{
-			resolve: `gatsby-plugin-mdx`,
-			options: {
-				extensions: [`.mdx`, `.md`],
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/posts`,
-				name: `posts`,
-			},
-		},
 		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-sharp`,
+		`gatsby-transformer-sharp`,
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
 				extensions: [`.mdx`, `.md`],
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: { maxWidth: 590 },
+					},
+				],
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: { maxWidth: 590 },
+					},
+				],
 			},
 		},
 		{
