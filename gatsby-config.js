@@ -1,6 +1,12 @@
 const siteMetadata = {
-	title: `The Localhost Blog`,
+	authorName: `Alisha Evans`,
 	description: `This is my coding blog where I write about my coding journey.`,
+	image: `/static/default-image.jpg`,
+	siteLanguage: `en-us`,
+	siteLocale: `en_us`,
+	siteUrl: `https://thelocalhost.blog`,
+	title: `My Blog`,
+	twitterUsername: `@thatgirlt0nii`,
 }
 
 module.exports = {

@@ -2,7 +2,9 @@ import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
+import SEO from 'react-seo-component'
 import Layout from '../components/Layout'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const IndexWrapper = styled.main``
 const PostWrapper = styled.div``
@@ -10,25 +12,46 @@ const Image = styled(Img)`
   border-radius: 5px;
 `
 
-const App = ({ data }) => (
-	<Layout>
-		<IndexWrapper>
-			{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
-				<PostWrapper key={id}>
-					<Link to={fields.slug}>
-						{!!frontmatter.cover
-							? <Image sizes={frontmatter.cover.childImageSharp.sizes} />
-							: null
-						}
-						<h1>{frontmatter.title}</h1>
-						<p>{frontmatter.date}</p>
-						<p>{excerpt}</p>
-					</Link>
-				</PostWrapper>
-			))}
-		</IndexWrapper>
-	</Layout>
-)
+const App = ({ data }) => {
+	const {
+		description,
+		title,
+		image,
+		siteUrl,
+		siteLanguage,
+		siteLocale,
+		twitterUsername,
+	} = useSiteMetadata()
+
+	return (
+		<Layout>
+			<SEO
+				title={title}
+				description={description}
+				image={`${siteUrl}${image}`}
+				pathname={siteUrl}
+				siteLanguage={siteLanguage}
+				siteLocale={siteLocale}
+				twitterUsername={twitterUsername}
+			/>
+			<IndexWrapper>
+				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
+					<PostWrapper key={id}>
+						<Link to={fields.slug}>
+							{!!frontmatter.cover
+								? <Image sizes={frontmatter.cover.childImageSharp.sizes} />
+								: null
+							}
+							<h1>{frontmatter.title}</h1>
+							<p>{frontmatter.date}</p>
+							<p>{excerpt}</p>
+						</Link>
+					</PostWrapper>
+				))}
+			</IndexWrapper>
+		</Layout>
+	)
+}
 
 export default App
 
