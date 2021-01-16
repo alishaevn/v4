@@ -1,0 +1,328 @@
+---
+title: Convert Classes to Functional Components
+date: 2021-01-15
+published: true
+heroImage: ''
+---
+
+<table>
+
+<tr>
+<th> Good </th>
+<th> Bad </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+int foo() {
+	int result = 4;
+	return result;
+}
+```
+
+</td>
+<td>
+
+```js
+int foo() { 
+	int x = 4;
+	return x;
+}
+```
+
+</td>
+</tr>
+
+</table>
+
+Recently I was asked to give a presentation on how I went about converting class components in a React Native app, into functional ones. While there's not exactly a cookie cutter recipe, some of the main commonalities I've come across are below.
+
+Underneath each heading is an example of a class, with the relevant parts to that heading. Followed by how I converted that class into a function.
+
+## Declaring the function and props
+One of the most obvious decisions is that we are no longer declaring a class, but a function.
+- While I prefer the use of arrow functions for const declarations and destructuring my props, it's not mandatory. 
+
+<table>
+
+<tr>
+<th> Class </th>
+<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+
+import React, { Component } from 'react'
+
+class Form extends Component {
+    render() {
+        const { submitText } = this.props
+
+        return (
+            <View>
+                <Button text={submitText} />
+            </View>
+        )
+    }
+}
+
+```
+
+</td>
+<td>
+
+```js
+
+import React from 'react'
+
+const Form = ({ submitText }) => (
+    <View>
+        <Button text={submitText}/>
+    </View>
+)
+
+
+
+```
+
+</td>
+</tr>
+
+</table>
+
+#### Class
+
+```js
+import React, { Component } from 'react'
+
+class Form extends Component {
+    render() {
+        const { submitText } = this.props
+
+        return (
+            <View>
+                <Button text={submitText} />
+            </View>
+        )
+    }
+}
+```
+
+#### Function
+```js
+import React from 'react'
+
+const Form = ({ submitText }) => (
+    <View>
+        <Button text={submitText}/>
+    </View>
+)
+
+```
+
+
+## Removing the constructor
+- No more references to `this`, just declare the variable
+- `useRef` > `createRef`
+- No `this.state`, instead we have the `useState` hook
+
+#### Class
+```js
+import React, { Component } from 'react'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            email: '',
+        }
+        this.nameRef = React.createRef()
+        this.emailRef = React.createRef()
+    }
+
+    render() {
+        return <View></View>
+   }
+}
+```
+
+#### Function
+```js
+import React, { useRef, useState } from 'react'
+
+const Form = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const nameRef = useRef()
+    const emailRef = useRef()
+
+    return <View></View>
+}
+```
+
+## Converting componentDidMount()
+
+#### Class
+```js
+import React, { Component } from 'react'
+
+class Form extends Component {
+    componentDidMount() {
+        this.keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            this._keyboardDidHide
+        )
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidHide.remove()
+    }
+
+    _keyboardDidHide = () => this.props.scrollDown()
+
+    render() {
+        return <View></View>
+    }
+}
+
+```
+
+#### Function
+```js
+import React, { useEffect } from 'react'
+
+const Form = ({ scrollDown, submitText }) => {
+    useEffect(() => {
+        const keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            _keyboardDidHide
+        )
+
+        return () => {
+            keyboardDidHide.remove()
+        }
+    }, [])
+
+    const _keyboardDidHide = () => scrollDown()
+
+    return <View></View>
+}
+```
+
+## Converting helper functions
+
+#### Class
+```js
+import React, { Component } from 'react'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            email: '',
+        }
+    }
+    
+    resetTextFields = () => {
+        this.setState({
+            name: '',
+            email: '',
+        })
+    }
+
+    render() {
+        return <View></View>
+    }
+}
+```
+
+#### Function
+```js
+import React, { useState } from 'react'
+
+const Form = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+
+    const resetTextFields = () => {
+        setName('')
+        setEmail('')
+    }
+
+    return <View></View>
+}
+
+```
+
+## Updating the function body
+
+#### Class
+```js
+import React, { Component } from 'react'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { name: '' }
+        this.nameRef = React.createRef()
+    }
+
+    render() {
+        return (
+            <View>
+                <TextInput
+                    key='name'
+                    value={name}
+                    ref={this.nameRef}
+                    style={styles.input}
+                    placeholder='Name'
+                    keyboardType='default'
+                    blurOnSubmit={false}
+                    onFocus={() => this.nameRef.current.focus()}
+                    multiline={false}
+                    onChangeText={this.onChange('name')}
+                    secureTextEntry={false}
+                    returnKeyType='next'
+                />
+            </View>
+        )
+    }
+}
+```
+
+#### Function
+```js
+import React, { createRef, useState } from 'react'
+
+const Form = () => {
+    const [name, setName] = useState('')
+    const nameRef = createRef()
+
+    return (
+        <View>
+            <TextInput
+                key='name'
+                value={name}
+                ref={nameRef}
+                style={styles.input}
+                placeholder='Name'
+                keyboardType='default'
+                blurOnSubmit={false}
+                onFocus={() => nameRef.current.focus()}
+                multiline={false}
+                onChangeText={name => setName(name)}
+                secureTextEntry={false}
+                returnKeyType='next'
+            />
+        </View>
+    )
+}
+
+```
