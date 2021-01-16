@@ -38,8 +38,8 @@ const App = ({ data }) => {
 				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
 					<PostWrapper key={id}>
 						<Link to={fields.slug}>
-							{!!frontmatter.cover
-								? <Image sizes={frontmatter.cover.childImageSharp.sizes} />
+							{!!frontmatter.heroImage
+								? <Image sizes={frontmatter.heroImage.childImageSharp.sizes} />
 								: null
 							}
 							<h1>{frontmatter.title}</h1>
@@ -75,10 +75,10 @@ export const query = graphql`
 				frontmatter {
 					title
 					date(formatString: "MMMM DD, YYYY")
-					cover {
+					heroImage {
 						publicURL
 						childImageSharp {
-						  sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
+						  sizes(maxWidth: 300, traceSVG: { color: "#639" }) {
 							...GatsbyImageSharpSizes_tracedSVG
 						  }
 						}
