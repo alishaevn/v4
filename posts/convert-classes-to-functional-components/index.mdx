@@ -5,58 +5,27 @@ published: true
 heroImage: ''
 ---
 
-<table>
-
-<tr>
-<th> Good </th>
-<th> Bad </th>
-</tr>
-
-<tr>
-<td>
-
-```js
-int foo() {
-	int result = 4;
-	return result;
-}
-```
-
-</td>
-<td>
-
-```js
-int foo() { 
-	int x = 4;
-	return x;
-}
-```
-
-</td>
-</tr>
-
-</table>
-
 Recently I was asked to give a presentation on how I went about converting class components in a React Native app, into functional ones. While there's not exactly a cookie cutter recipe, some of the main commonalities I've come across are below.
 
-Underneath each heading is an example of a class, with the relevant parts to that heading. Followed by how I converted that class into a function.
+Underneath each heading is an example of a class, with the relevant parts to that heading. Next to how I converted that class into a function.
 
 ## Declaring the function and props
-One of the most obvious decisions is that we are no longer declaring a class, but a function.
-- While I prefer the use of arrow functions for const declarations and destructuring my props, it's not mandatory. 
+- While I prefer using arrow functions for const declarations, it's not mandatory
+- You can destructure props in the argument, or just pass in `props` 
+- Remove the render and enclosing curly braces
+- Destructuring the props in the argument means I don't need a return block
 
 <table>
 
 <tr>
-<th> Class </th>
-<th> Function </th>
+	<th> Class </th>
+	<th> Function </th>
 </tr>
 
 <tr>
 <td>
 
 ```js
-
 import React, { Component } from 'react'
 
 class Form extends Component {
@@ -71,13 +40,13 @@ class Form extends Component {
     }
 }
 
+export default Form
 ```
 
 </td>
 <td>
 
 ```js
-
 import React from 'react'
 
 const Form = ({ submitText }) => (
@@ -88,42 +57,17 @@ const Form = ({ submitText }) => (
 
 
 
+
+
+
+
+export default Form
 ```
 
 </td>
 </tr>
 
 </table>
-
-#### Class
-
-```js
-import React, { Component } from 'react'
-
-class Form extends Component {
-    render() {
-        const { submitText } = this.props
-
-        return (
-            <View>
-                <Button text={submitText} />
-            </View>
-        )
-    }
-}
-```
-
-#### Function
-```js
-import React from 'react'
-
-const Form = ({ submitText }) => (
-    <View>
-        <Button text={submitText}/>
-    </View>
-)
-
-```
 
 
 ## Removing the constructor
@@ -131,7 +75,16 @@ const Form = ({ submitText }) => (
 - `useRef` > `createRef`
 - No `this.state`, instead we have the `useState` hook
 
-#### Class
+<table>
+
+<tr>
+	<th> Class </th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
 ```js
 import React, { Component } from 'react'
 
@@ -150,9 +103,13 @@ class Form extends Component {
         return <View></View>
    }
 }
+
+export default Form
 ```
 
-#### Function
+</td>
+<td>
+
 ```js
 import React, { useRef, useState } from 'react'
 
@@ -164,11 +121,36 @@ const Form = () => {
 
     return <View></View>
 }
+
+
+
+
+
+
+
+
+export default Form
 ```
 
-## Converting componentDidMount()
+</td>
+</tr>
 
-#### Class
+</table>
+
+
+## Converting componentDidMount()
+- 
+
+<table>
+
+<tr>
+	<th> Class </th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
 ```js
 import React, { Component } from 'react'
 
@@ -191,9 +173,12 @@ class Form extends Component {
     }
 }
 
+export default Form
 ```
 
-#### Function
+</td>
+<td>
+
 ```js
 import React, { useEffect } from 'react'
 
@@ -213,11 +198,31 @@ const Form = ({ scrollDown, submitText }) => {
 
     return <View></View>
 }
+
+
+
+export default Form
 ```
 
-## Converting helper functions
+</td>
+</tr>
 
-#### Class
+</table>
+
+
+## Converting helper functions
+- 
+
+<table>
+
+<tr>
+	<th> Class </th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
 ```js
 import React, { Component } from 'react'
 
@@ -241,9 +246,13 @@ class Form extends Component {
         return <View></View>
     }
 }
+
+export default Form
 ```
 
-#### Function
+</td>
+<td>
+
 ```js
 import React, { useState } from 'react'
 
@@ -259,11 +268,37 @@ const Form = () => {
     return <View></View>
 }
 
+
+
+
+
+
+
+
+
+
+export default Form
 ```
 
-## Updating the function body
+</td>
+</tr>
 
-#### Class
+</table>
+
+
+## Updating the function body
+- 
+
+<table>
+
+<tr>
+	<th> Class </th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
 ```js
 import React, { Component } from 'react'
 
@@ -295,15 +330,19 @@ class Form extends Component {
         )
     }
 }
+
+export default Form
 ```
 
-#### Function
+</td>
+<td>
+
 ```js
-import React, { createRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 const Form = () => {
     const [name, setName] = useState('')
-    const nameRef = createRef()
+    const nameRef = useRef()
 
     return (
         <View>
@@ -325,4 +364,15 @@ const Form = () => {
     )
 }
 
+
+
+
+
+
+export default Form
 ```
+
+</td>
+</tr>
+
+</table>
