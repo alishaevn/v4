@@ -6,6 +6,9 @@ const Header = ({ siteTitle, siteDescription }) => (
 		<Link to='/'>
 			<h1>{siteTitle}</h1>
 		</Link>
+		<Link to='/blog'>
+			<h1>Blog</h1>
+		</Link>
 		<p>{siteDescription}</p>
 	</div>
 )
