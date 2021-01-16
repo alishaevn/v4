@@ -27,6 +27,7 @@ Underneath each heading is an example of a class, with the relevant parts to tha
 
 ```js
 import React, { Component } from 'react'
+import { Button, View } from 'react-native'
 
 class Form extends Component {
     render() {
@@ -48,6 +49,7 @@ export default Form
 
 ```js
 import React from 'react'
+import { Button, View } from 'react-native'
 
 const Form = ({ submitText }) => (
     <View>
@@ -71,8 +73,8 @@ export default Form
 
 
 ## Removing the constructor
-- No more references to `this`, just declare the variable
-- `useRef` > `createRef`
+- Convert variables declared with `this`, to a `const`
+- `useRef` instead of `createRef`
 - No `this.state`, instead we have the `useState` hook
 
 <table>
@@ -87,6 +89,7 @@ export default Form
 
 ```js
 import React, { Component } from 'react'
+import { View } from 'react-native'
 
 class Form extends Component {
     constructor(props) {
@@ -112,6 +115,7 @@ export default Form
 
 ```js
 import React, { useRef, useState } from 'react'
+import { View } from 'react-native'
 
 const Form = () => {
     const [name, setName] = useState('')
@@ -139,7 +143,10 @@ export default Form
 
 
 ## Converting componentDidMount()
-- 
+- Replace the `componentDidMount` lifecycle method with the `useEffect` hook
+- Remember to add the empty brackets as a callback
+- Convert variables declared with `this`, to a `const`
+- If there's a `componentWillUnmount`, add that with a return statement to the `useEffect` hook
 
 <table>
 
@@ -153,6 +160,7 @@ export default Form
 
 ```js
 import React, { Component } from 'react'
+import { View } from 'react-native'
 
 class Form extends Component {
     componentDidMount() {
@@ -181,6 +189,7 @@ export default Form
 
 ```js
 import React, { useEffect } from 'react'
+import { View } from 'react-native'
 
 const Form = ({ scrollDown, submitText }) => {
     useEffect(() => {
@@ -211,7 +220,8 @@ export default Form
 
 
 ## Converting helper functions
-- 
+- Functions defined outside of the render now need a variable declaration
+- `this.setState({})` is replaced by the `useState` hook
 
 <table>
 
@@ -225,6 +235,7 @@ export default Form
 
 ```js
 import React, { Component } from 'react'
+import { View } from 'react-native'
 
 class Form extends Component {
     constructor(props) {
@@ -255,6 +266,7 @@ export default Form
 
 ```js
 import React, { useState } from 'react'
+import { View } from 'react-native'
 
 const Form = () => {
     const [name, setName] = useState('')
@@ -286,8 +298,7 @@ export default Form
 </table>
 
 
-## Updating the function body
-- 
+# The final picture!
 
 <table>
 
@@ -301,6 +312,7 @@ export default Form
 
 ```js
 import React, { Component } from 'react'
+import { Button, TextInput, View } from 'react-native'
 
 class Form extends Component {
     constructor(props) {
@@ -309,24 +321,20 @@ class Form extends Component {
         this.nameRef = React.createRef()
     }
 
+	onChange = field => value => this.setState({ [field]: value })
+
     render() {
+		const { submitText } = this.props
+
         return (
             <View>
                 <TextInput
-                    key='name'
                     value={name}
                     ref={this.nameRef}
-                    style={styles.input}
-                    placeholder='Name'
-                    keyboardType='default'
-                    blurOnSubmit={false}
-                    onFocus={() => this.nameRef.current.focus()}
-                    multiline={false}
                     onChangeText={this.onChange('name')}
-                    secureTextEntry={false}
-                    returnKeyType='next'
                 />
             </View>
+			<Button text={submitText}/>
         )
     }
 }
@@ -339,30 +347,27 @@ export default Form
 
 ```js
 import React, { useRef, useState } from 'react'
+import { Button, TextInput, View } from 'react-native'
 
-const Form = () => {
+const Form = ({ submitText }) => {
     const [name, setName] = useState('')
     const nameRef = useRef()
 
     return (
         <View>
             <TextInput
-                key='name'
                 value={name}
                 ref={nameRef}
-                style={styles.input}
-                placeholder='Name'
-                keyboardType='default'
-                blurOnSubmit={false}
-                onFocus={() => nameRef.current.focus()}
-                multiline={false}
                 onChangeText={name => setName(name)}
-                secureTextEntry={false}
-                returnKeyType='next'
             />
+			<Button text={submitText}/>
         </View>
     )
 }
+
+
+
+
 
 
 
