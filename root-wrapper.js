@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
-import Code from './src/components/Code/index'
+import CodeBlock from './src/components/CodeBlock/index'
 
 const components = {
 	h2: ({ children }) => (
@@ -10,18 +10,20 @@ const components = {
 		<code style={{ backgroundColor: 'lightgray' }} {...props} />
 	),
 	pre: ({ children: { props } }) => {
+		console.log('CODE PROPS::', props)
 		const codeString = props.children.trim()
 		const language = props.className && props.className.replace('language-', '')
 
-			if (props.mdxType === 'code') {
-				return (
-				  <Code
+		if (props.mdxType === 'code') {
+			// any inline code or code block in a markdown file
+			return (
+				<CodeBlock
 					codeString={codeString}
 					language={language}
 					{...props}
-				  />
-				);
-			  }
+				/>
+			)
+		}
 	}
 }
 

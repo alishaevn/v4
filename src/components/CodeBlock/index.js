@@ -6,20 +6,23 @@ import {
 	LiveError,
 	LivePreview,
 	LiveProvider,
-  } from 'react-live'
+} from 'react-live'
 import { LineNo, Pre } from './styles'
 
-const Code = ({ codeString, language, ...props }) => {
+const CodeBlock = ({ codeString, language, ...props }) => {
+	// if 'jsx react-live' is the chosen syntax highlighter
+	// render an editable code block 
 	if (props['react-live']) {
 		return (
-		  <LiveProvider code={codeString} noInline={true} theme={theme}>
-			<LiveEditor />
-			<LiveError />
-			<LivePreview />
-		  </LiveProvider>
+			<LiveProvider code={codeString} noInline={true} theme={theme}>
+				<LiveEditor />
+				<LiveError />
+				<LivePreview />
+			</LiveProvider>
 		)
 	}
 
+	// otherwise, render a regular code block
 	return (
 		<Highlight
 			{...defaultProps}
@@ -49,4 +52,4 @@ const Code = ({ codeString, language, ...props }) => {
 	)
 }
 
-export default Code
+export default CodeBlock
