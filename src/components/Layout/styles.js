@@ -2,26 +2,18 @@ import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 
 export const AppStyles = styled.main`
-	width: 320px;
 	margin: 0 auto;
+	max-width: 1400px;
 
 	@media ${devices.mobileM} { 
-		width: 345px;
-	}
-
-	@media ${devices.mobileL} { 
-		width: 405px;
+		width: 95%;
 	}
 
 	@media ${devices.tablet} { 
-		width: 718px;
+		width: 85%;
 	}
 
 	@media ${devices.laptop} { 
-		width: 800px;
-	}
-	
-	@media ${devices.desktop} {
-		max-width: 1400px;
+		width: 75%;
 	}
 `
