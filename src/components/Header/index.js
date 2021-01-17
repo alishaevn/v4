@@ -1,11 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import styled from 'styled-components'
-
-const PostWrapper = styled.nav`
-	display: flex;
-	justify-content: space-between;
-`
+import { PostWrapper } from './styles'
 
 const Header = ({ siteTitle, siteDescription }) => (
 	<PostWrapper>
