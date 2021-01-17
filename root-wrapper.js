@@ -10,7 +10,6 @@ const components = {
 		<code style={{ backgroundColor: 'lightgray' }} {...props} />
 	),
 	pre: ({ children: { props } }) => {
-		console.log('CODE PROPS::', props)
 		const codeString = props.children.trim()
 		const language = props.className && props.className.replace('language-', '')
 
