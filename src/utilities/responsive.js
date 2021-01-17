@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { devices } from '../../utilities/devices'
+import { devices } from './devices'
 
 export const AppStyles = styled.main`
 	margin: 0 auto;
