@@ -46,7 +46,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions
 
 	if (node.internal.type === `Mdx`) {
-		const value = createFilePath({ node, getNode })
+		// create the path for the blog posts
+		const value = `/blog${createFilePath({ node, getNode })}`
+
 		createNodeField({
 			name: `slug`,
 			node,
@@ -57,13 +59,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createSchemaCustomization = ({ actions }) => {
 	const { createTypes } = actions
-  
+
 	createTypes(`
-	  type Mdx implements Node {
-		frontmatter: MdxFrontmatter!
-	  }
-	  type MdxFrontmatter {
-		heroImage: File @fileByRelativePath
-	  }
+		type Mdx implements Node {
+			frontmatter: MdxFrontmatter!
+		}
+		type MdxFrontmatter {
+			heroImage: File @fileByRelativePath
+		}
 	`)
-  }
+}
