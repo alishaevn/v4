@@ -5,7 +5,7 @@ const siteMetadata = {
 	siteLanguage: `en-us`,
 	siteLocale: `en_us`,
 	siteUrl: `https://thelocalhost.blog`,
-	title: `My Blog`,
+	title: `Alisha Evans`,
 	twitterUsername: `@thatgirlt0nii`,
 }
 
