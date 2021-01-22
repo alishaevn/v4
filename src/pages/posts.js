@@ -12,7 +12,7 @@ const Image = styled(Img)`
   border-radius: 5px;
 `
 
-const Blog = ({ data }) => {
+const Posts = ({ data }) => {
 	const {
 		description,
 		title,
@@ -53,7 +53,7 @@ const Blog = ({ data }) => {
 	)
 }
 
-export default Blog
+export default Posts
 
 export const query = graphql`
 	query SITE_INDEX_QUERY {

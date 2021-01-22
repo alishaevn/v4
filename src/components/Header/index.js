@@ -1,16 +1,18 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { PostWrapper } from './styles'
+import { H1, PostWrapper } from './styles'
 
-const Header = ({ siteTitle, siteDescription }) => (
+const Header = () => (
 	<PostWrapper>
 		<Link to='/'>
-			<h1>Home</h1>
+			<H1>home</H1>
 		</Link>
-		<Link to='/blog'>
-			<h1>Blog</h1>
+		<Link to='/about'>
+			<H1>about</H1>
 		</Link>
-		{/* <p>{siteDescription}</p> */}
+		<Link to='/posts'>
+			<H1>posts</H1>
+		</Link>
 	</PostWrapper>
 )
 
