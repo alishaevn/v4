@@ -1,10 +1,11 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import CodeBlock from './src/components/CodeBlock/index'
+import { Main } from './src/utilities/responsive'
 
 const components = {
 	h2: ({ children }) => (
-		<h2 style={{ color: 'rebeccapurple' }}>{children}</h2>
+		<h2>{children}</h2>
 	),
 	'p.inlineCode': props => (
 		<code style={{ backgroundColor: 'lightgray' }} {...props} />
@@ -14,7 +15,7 @@ const components = {
 		const language = props.className && props.className.replace('language-', '')
 
 		if (props.mdxType === 'code') {
-			// any inline code or code block in a markdown file
+			// any code block in a markdown file
 			return (
 				<CodeBlock
 					codeString={codeString}
@@ -27,5 +28,7 @@ const components = {
 }
 
 export const wrapRootElement = ({ element }) => (
-	<MDXProvider components={components}>{element}</MDXProvider>
+	<MDXProvider components={components}>
+		<Main>{element}</Main>
+	</MDXProvider>
 )

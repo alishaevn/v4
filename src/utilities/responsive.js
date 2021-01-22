@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { devices } from './devices'
+import { eerieBlack } from './colors'
 
-export const AppStyles = styled.main`
+export const AppStyles = styled.div`
 	margin: 0 auto;
 	max-width: 1400px;
 
@@ -16,4 +17,11 @@ export const AppStyles = styled.main`
 	@media ${devices.laptop} { 
 		width: 75%;
 	}
+`
+
+export const Main = styled.main`
+	background-color: ${eerieBlack};
+	height: 100vh;
+	width: 100vw;
+	margin: -8px;
 `

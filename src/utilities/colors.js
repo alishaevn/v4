@@ -1,0 +1,7 @@
+export const black = '#000000'
+export const coral = '#f5948e'
+export const eerieBlack = '#1f1f1f'
+export const glacier = '#f5f5f5'
+export const golden = '#ffad0a'
+export const seaFoam = '#21c0ab'
+export const white = '#ffffff'
