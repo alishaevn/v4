@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from 'react-seo-component'
+import Landing from '../components/Landing'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
@@ -25,6 +26,7 @@ const App = () => {
 				siteLocale={siteLocale}
 				twitterUsername={twitterUsername}
 			/>
+			<Landing />
 		</Layout>
 	)
 }
