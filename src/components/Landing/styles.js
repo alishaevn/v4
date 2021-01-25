@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { golden, seaFoam } from '../../utilities/colors'
+import '../../utilities/typography.scss'
 
 export const H1 = styled.h1`
 	color: ${golden};
@@ -18,6 +19,11 @@ export const SocialIconsWrapper = styled.nav`
 
 export const Welcome = styled.p`
 	color: ${seaFoam};
+	font-family: 'provicali';
+	letter-spacing: 2px;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
 `
 
 export const Wrapper = styled.div`
