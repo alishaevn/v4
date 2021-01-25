@@ -24,4 +24,6 @@ export const Main = styled.main`
 	height: 100vh;
 	width: 100vw;
 	margin: -8px;
+	padding: 20px;
+	box-sizing: border-box;
 `
