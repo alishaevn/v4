@@ -31,3 +31,6 @@ export const Welcome = styled.p`
 	line-height: 24px;
 	text-align: center;
 `
+
+export const Wrapper = styled.div`
+`
