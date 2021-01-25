@@ -15,10 +15,7 @@ import twitter from '../../../assets/images/twitter.png'
 
 const Landing = () => (
 	<Wrapper>
-		<H1>
-			hello
-		</H1>
-		<Welcome>
+		<H1>hello</H1>
 			my name is alisha,
 			a software developer with a love for making beautiful web and mobile apps.
 			thanks for stopping by.

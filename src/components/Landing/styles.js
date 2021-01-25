@@ -5,6 +5,11 @@ import '../../utilities/typography.scss'
 
 export const H1 = styled.h1`
 	color: ${golden};
+	font-family: 'hello';
+	text-align: center;
+	margin-bottom: 0px;
+	font-size: 60px;
+	line-height: 40px;
 `
 
 export const SocialIcon = styled.img`
