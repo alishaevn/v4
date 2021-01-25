@@ -1,11 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import HamburgerMenu from '../HamburgerMenu'
 import { H1, Logo, NavBar, NavLinks } from './styles'
 import logo from '../../../assets/images/seafoam_horizontal.png'
 
 const Header = () => (
 	<NavBar>
 		<Logo src={logo} />
+		<HamburgerMenu />
 		<NavLinks>
 			<Link to='/'>
 				<H1>home</H1>

@@ -17,4 +17,9 @@ export const NavBar = styled.nav`
 `
 
 export const NavLinks = styled.div`
+	display: none;
+
+	@media ${devices.laptop} { 
+		display: initial;
+	}
 `
