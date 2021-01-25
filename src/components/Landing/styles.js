@@ -13,13 +13,14 @@ export const H1 = styled.h1`
 `
 
 export const SocialIcon = styled.img`
-	height: 15px;
+	height: 20px;
 `
 
-export const SocialIconsWrapper = styled.nav`
+export const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 155px;
+	margin: 0 auto;
 `
 
 export const Welcome = styled.p`
@@ -29,9 +30,4 @@ export const Welcome = styled.p`
 	font-size: 20px;
 	line-height: 24px;
 	text-align: center;
-`
-
-export const Wrapper = styled.div`
-	// justify-content: 'center';
-	text-align: 'center';
 `

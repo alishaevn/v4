@@ -7,7 +7,7 @@ export const H1 = styled.h1`
 `
 
 export const Logo = styled.img`
-	height: 35px;
+	height: 25px;
 `
 
 export const NavBar = styled.nav`
