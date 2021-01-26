@@ -13,7 +13,6 @@ export const Logo = styled.img`
 export const NavBar = styled.nav`
 	display: flex;
 	justify-content: space-between;
-	width: 200px;
 `
 
 export const NavLinks = styled.div`

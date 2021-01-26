@@ -2,13 +2,11 @@ import React from 'react'
 import { MenuIcon } from './styles'
 
 const HamburgerMenu = () => (
-	<div>
-		<MenuIcon>
-			<div />
-			<div />
-			<div />
-		</MenuIcon>
-	</div>
+	<MenuIcon>
+		<div />
+		<div />
+		<div />
+	</MenuIcon>
 )
 
 export default HamburgerMenu
