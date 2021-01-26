@@ -9,7 +9,7 @@ export const H1 = styled.h1`
 	text-align: center;
 	margin-bottom: 0px;
 	font-size: 60px;
-	line-height: 40px;
+	line-height: 45px;
 `
 
 export const SocialIcon = styled.img`
@@ -20,7 +20,7 @@ export const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 155px;
-	margin: 0 auto;
+	margin: 35px auto 0;
 `
 
 export const Welcome = styled.p`
@@ -33,4 +33,5 @@ export const Welcome = styled.p`
 `
 
 export const Wrapper = styled.div`
+	margin-top: 160px;
 `
