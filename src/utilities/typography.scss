@@ -6,6 +6,13 @@
 }
 
 @font-face {
+	font-family: 'montserrat';
+	src: url('~@fontsource/montserrat');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'provicali';
 	src: url('../../assets/fonts/provicali.woff') format('woff'),
 		 url('../../assets/fonts/provicali.woff2') format('woff2');
