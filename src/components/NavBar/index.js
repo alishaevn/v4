@@ -40,6 +40,7 @@ const MenuIcon = styled.button`
 	height: 2rem;
 	outline: thin-dotted;
 	z-index: 11;
+	padding: 0;
 
 	div {
 		width: 2rem;

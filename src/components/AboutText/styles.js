@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
-import { golden, white } from '../../utilities/colors'
+import { white } from '../../utilities/colors'
 import '../../utilities/typography.scss'
 
 export const Text = styled.p`
