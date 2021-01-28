@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import logo from '../../../assets/images/seafoam_horizontal.png'
-import { coral, golden } from '../../utilities/colors'
-
+import { coral, eerieBlack, golden } from '../../utilities/colors'
+import { devices } from '../../utilities/devices'
 import { HamburgerMenu, Logo, Navigation } from './styles'
 
 const NavBar = () => {
@@ -81,4 +81,22 @@ const NavLinks = styled.nav`
 	transform: ${({ menuOpen }) =>
 		menuOpen ? 'translateX(0)' : 'translateX(100%)'
 	};
+	background-color: ${eerieBlack};
+
+	a {
+		color: ${golden};
+		font-size: 30px;
+		text-decoration: none;
+		margin-bottom: 10px;
+
+		:hover {
+			color: ${coral};
+			transition: color 300ms;
+			// border-bottom: 2px solid green;
+		}
+	}
+
+	@media ${devices.laptop} { 
+		display: initial;
+	}
 `

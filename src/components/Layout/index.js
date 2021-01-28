@@ -1,17 +1,12 @@
 import React from 'react'
-import useSiteMetadata from '../../hooks/useSiteMetadata'
-import Header from '../Header/index'
+import NavBar from '../NavBar/index'
 import { AppStyles } from '../../utilities/responsive'
 
-const Layout = ({ children }) => {
-	const { title, description } = useSiteMetadata()
-
-	return (
-		<AppStyles>
-			<Header siteTitle={title} siteDescription={description} />
-			{children}
-		</AppStyles>
-	)
-}
+const Layout = ({ children }) => (
+	<AppStyles>
+		<NavBar />
+		{children}
+	</AppStyles>
+)
 
 export default Layout
