@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import logo from '../../../assets/images/seafoam_horizontal.png'
+import { coral, golden } from '../../utilities/colors'
 
 import { HamburgerMenu, Logo, Navigation } from './styles'
 
@@ -43,7 +44,7 @@ const MenuIcon = styled.button`
 	div {
 		width: 2rem;
 		height: 0.25rem;
-		background: ${({ menuOpen }) => (menuOpen ? 'red' : 'black')};
+		background: ${({ menuOpen }) => (menuOpen ? `${coral}` : `${golden}`)};
 		border-radius: 10px;
 		transform-origin: 1px;
 		transition: opacity 300ms, transform 300ms;
@@ -78,21 +79,6 @@ const NavLinks = styled.nav`
 	right: 0;
 	transition: transform 300ms;
 	transform: ${({ menuOpen }) =>
-		menuOpen ? 'translateX(0)' : 'translateX(100%)'};
-
-	ul {
-		width: 100%;
-		margin: 0;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		display: flex;
-		li {
-			list-style: none;
-			a {
-			text-decoration: none;
-			color: white;
-			}
-		}
-	}
+		menuOpen ? 'translateX(0)' : 'translateX(100%)'
+	};
 `
