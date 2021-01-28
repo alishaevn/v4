@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from 'react-seo-component'
+import AboutText from '../components/AboutText'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
@@ -25,6 +26,7 @@ const About = () => {
 				siteLocale={siteLocale}
 				twitterUsername={twitterUsername}
 			/>
+			<AboutText />
 		</Layout>
 	)
 }
