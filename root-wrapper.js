@@ -4,6 +4,7 @@ import CodeBlock from './src/components/markdown-styles/CodeBlock'
 import Header1 from './src/components/markdown-styles/Header1'
 import Header2 from './src/components/markdown-styles/Header2'
 import { Paragraph, ParagraphWithInlineCode } from './src/components/markdown-styles/Paragraphs'
+import { Table, TableData, TableHeader, TableRow } from './src/components/markdown-styles/Tables'
 import UnorderedList from './src/components/markdown-styles/UnorderedList'
 import { Main } from './src/utilities/responsive'
 
@@ -28,6 +29,10 @@ const components = {
 		}
 	},
 	ul: UnorderedList,
+	table: Table,
+	td: TableData,
+	th: TableHeader,
+	tr: ({ children }) => <TableRow>{children}</TableRow>,
 }
 
 export const wrapRootElement = ({ element }) => (
