@@ -17,6 +17,7 @@ export const Title = styled.p`
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	white-space: nowrap;
+	font-weight: bold;
 `
 
 export const Wrapper = styled.div`

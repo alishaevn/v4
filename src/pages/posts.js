@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
 import SEO from 'react-seo-component'
+import Header from '../components/Header'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
@@ -34,6 +35,7 @@ const Posts = ({ data }) => {
 				siteLocale={siteLocale}
 				twitterUsername={twitterUsername}
 			/>
+			<Header title='blog posts' />
 			<IndexWrapper>
 				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
 					<PostWrapper key={id}>

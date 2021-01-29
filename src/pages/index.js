@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from 'react-seo-component'
+import Header from '../components/Header'
 import Landing from '../components/Landing'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
@@ -27,6 +28,7 @@ const App = () => {
 				twitterUsername={twitterUsername}
 			/>
 			<Landing />
+			<Header title='recent posts' />
 		</Layout>
 	)
 }
