@@ -13,6 +13,13 @@
 }
 
 @font-face {
+	font-family: 'poppins';
+	src: url('~@fontsource/poppins');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'provicali';
 	src: url('../../assets/fonts/provicali.woff') format('woff'),
 		 url('../../assets/fonts/provicali.woff2') format('woff2');
