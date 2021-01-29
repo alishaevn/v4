@@ -1,6 +1,8 @@
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
+import Header1 from '../components/markdown-styles/Header1'
+import { Date } from '../components/markdown-styles/Paragraphs'
 import Layout from '../components/Layout'
 
 const Post = ({ data, pageContext }) => {
@@ -9,8 +11,8 @@ const Post = ({ data, pageContext }) => {
 
 	return (
 		<Layout>
-			<h1>{frontmatter.title}</h1>
-			<p>{frontmatter.date}</p>
+			<Header1>{frontmatter.title}</Header1>
+			<Date>{frontmatter.date}</Date>
 			<MDXRenderer>{body}</MDXRenderer>
 			{previous === false ? null : (
 				<>

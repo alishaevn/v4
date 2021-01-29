@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { golden, seaFoam } from '../../utilities/colors'
-import '../../utilities/typography.scss'
+// import '../../utilities/typography.scss'
 
 export const H1 = styled.h1`
 	color: ${golden};

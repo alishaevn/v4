@@ -1,15 +1,17 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
-import CodeBlock from './src/components/CodeBlock/index'
+import CodeBlock from './src/components/markdown-styles/CodeBlock'
+import Header1 from './src/components/markdown-styles/Header1'
+import Header2 from './src/components/markdown-styles/Header2'
+import { Paragraph, ParagraphWithInlineCode } from './src/components/markdown-styles/Paragraphs'
+import UnorderedList from './src/components/markdown-styles/UnorderedList'
 import { Main } from './src/utilities/responsive'
 
 const components = {
-	h2: ({ children }) => (
-		<h2>{children}</h2>
-	),
-	'p.inlineCode': props => (
-		<code style={{ backgroundColor: 'lightgray' }} {...props} />
-	),
+	h1: ({ children }) => <Header1>{children}</Header1>,
+	h2: ({ children }) => <Header2>{children}</Header2>,
+	p: Paragraph,
+	'p.inlineCode': props => <ParagraphWithInlineCode {...props} />,
 	pre: ({ children: { props } }) => {
 		const codeString = props.children.trim()
 		const language = props.className && props.className.replace('language-', '')
@@ -24,7 +26,8 @@ const components = {
 				/>
 			)
 		}
-	}
+	},
+	ul: UnorderedList,
 }
 
 export const wrapRootElement = ({ element }) => (
