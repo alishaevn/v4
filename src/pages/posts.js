@@ -66,6 +66,8 @@ export const query = graphql`
 				frontmatter {
 					title
 					date(formatString: "MMMM DD, YYYY")
+					blurb
+					category
 					heroImage {
 						publicURL
 						childImageSharp {

@@ -1,14 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { PostWrapper } from './styles'
+import {
+	Excerpt,
+	Meta,
+	PostWrapper,
+	StyledLink,
+	Title,
+} from './styles'
 
-const BlogPost = ({ background, excerpt, fields, frontmatter, id }) => (
+const BlogPost = ({ background, fields, frontmatter, id }) => (
 	<PostWrapper background={background} key={id}>
-		<Link to={fields.slug}>
-			<h1>{frontmatter.title}</h1>
-			<p>{frontmatter.date}</p>
-			<p>{excerpt}</p>
-		</Link>
+		<StyledLink to={fields.slug}>
+			<Title>{frontmatter.title}</Title>
+			<Meta>{frontmatter.date} | {frontmatter.category}</Meta>
+			<Excerpt>{frontmatter.blurb}</Excerpt>
+		</StyledLink>
 	</PostWrapper>
 )
 
