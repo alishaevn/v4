@@ -32,7 +32,7 @@ const Posts = ({ data }) => {
 			<main>
 				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
 					<BlogPost
-						background={true}
+						rightAligned={true}
 						excerpt={excerpt}
 						fields={fields}
 						frontmatter={frontmatter}

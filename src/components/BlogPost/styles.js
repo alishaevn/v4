@@ -9,7 +9,6 @@ export const Excerpt = styled.p`
 	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
-	text-align: right;
 `
 
 export const Meta = styled.p`
@@ -17,13 +16,13 @@ export const Meta = styled.p`
 	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
-	text-align: right;
 `
 
 export const PostWrapper = styled.div`
-	background: ${({ background }) => background ? `${coral}` : 'transparent'};
+	background: ${({ rightAligned }) => rightAligned ? `${coral}` : 'transparent'};
 	padding: 5px 15px 20px;
-    border-radius: 5px;
+	border-radius: 5px;
+	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
 `
 
 export const StyledLink = styled(Link)`
@@ -35,6 +34,5 @@ export const Title = styled.h1`
 	font-family: 'provicali';
 	font-size: 26px;
 	line-height: 29px;
-	text-align: right;
 	letter-spacing: 0.5px;
 `
