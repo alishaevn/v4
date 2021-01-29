@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
-import { coral, white } from '../../utilities/colors'
+import { coral, seaFoam, white } from '../../utilities/colors'
 import '../../utilities/typography.scss'
 
 export const Excerpt = styled.p`
@@ -20,7 +20,7 @@ export const Meta = styled.p`
 
 export const PostWrapper = styled.div`
 	background: ${({ rightAligned }) => rightAligned ? `${coral}` : 'transparent'};
-	padding: 5px 15px 20px;
+	padding: ${({ rightAligned }) => rightAligned ? '5px 15px 20px' : '0'};
 	border-radius: 5px;
 	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
 `
@@ -30,7 +30,7 @@ export const StyledLink = styled(Link)`
 `
 
 export const Title = styled.h1`
-	color: ${white};
+	color: ${({ rightAligned }) => rightAligned ? `${white}` : `${seaFoam}`};
 	font-family: 'provicali';
 	font-size: 26px;
 	line-height: 29px;

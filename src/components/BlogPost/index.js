@@ -10,9 +10,15 @@ import {
 const BlogPost = ({ rightAligned, fields, frontmatter, id }) => (
 	<PostWrapper rightAligned={rightAligned} key={id}>
 		<StyledLink to={fields.slug}>
-			<Title>{frontmatter.title}</Title>
-			<Meta>{frontmatter.date} | {frontmatter.category}</Meta>
-			<Excerpt>{frontmatter.blurb}</Excerpt>
+			<Title rightAligned={rightAligned}>
+				{frontmatter.title}
+			</Title>
+			<Meta>
+				{frontmatter.date} | {frontmatter.category}
+			</Meta>
+			<Excerpt>
+				{frontmatter.blurb}
+			</Excerpt>
 		</StyledLink>
 	</PostWrapper>
 )

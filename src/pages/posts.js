@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 import SEO from 'react-seo-component'
 import BlogPost from '../components/BlogPost'
@@ -30,10 +29,8 @@ const Posts = ({ data }) => {
 			/>
 			<Header title='blog posts' />
 			<main>
-				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
+				{data.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost
-						rightAligned={true}
-						excerpt={excerpt}
 						fields={fields}
 						frontmatter={frontmatter}
 						id={id}
@@ -45,39 +42,3 @@ const Posts = ({ data }) => {
 }
 
 export default Posts
-
-export const query = graphql`
-	query SITE_INDEX_QUERY {
-		allMdx(
-			sort: {
-				fields: [ frontmatter___date ],
-				order: DESC,
-			},
-			filter: {
-				frontmatter: {
-					published: { eq: true },
-				},
-			},
-		) {
-			nodes {
-				id
-				excerpt(pruneLength: 250)
-				fields { slug }
-				frontmatter {
-					title
-					date(formatString: "MMMM DD, YYYY")
-					blurb
-					category
-					heroImage {
-						publicURL
-						childImageSharp {
-						  sizes(maxWidth: 300, traceSVG: { color: "#639" }) {
-							...GatsbyImageSharpSizes_tracedSVG
-						  }
-						}
-					}
-				}
-			}
-		}
-	}
-`
