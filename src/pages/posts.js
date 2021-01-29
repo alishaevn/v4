@@ -1,17 +1,10 @@
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import React from 'react'
-import styled from 'styled-components'
 import SEO from 'react-seo-component'
+import BlogPost from '../components/BlogPost'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
-
-const IndexWrapper = styled.main``
-const PostWrapper = styled.div``
-const Image = styled(Img)`
-  border-radius: 5px;
-`
 
 const Posts = ({ data }) => {
 	const {
@@ -36,21 +29,16 @@ const Posts = ({ data }) => {
 				twitterUsername={twitterUsername}
 			/>
 			<Header title='blog posts' />
-			<IndexWrapper>
+			<main>
 				{data.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
-					<PostWrapper key={id}>
-						<Link to={fields.slug}>
-							{!!frontmatter.heroImage
-								? <Image sizes={frontmatter.heroImage.childImageSharp.sizes} />
-								: null
-							}
-							<h1>{frontmatter.title}</h1>
-							{/* <p>{frontmatter.date}</p> */}
-							{/* <p>{excerpt}</p> */}
-						</Link>
-					</PostWrapper>
+					<BlogPost
+						excerpt={excerpt}
+						fields={fields}
+						frontmatter={frontmatter}
+						id={id}
+					/>
 				))}
-			</IndexWrapper>
+			</main>
 		</Layout>
 	)
 }
