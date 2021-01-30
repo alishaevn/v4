@@ -31,7 +31,7 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled.h1`
 	color: ${({ rightAligned }) => rightAligned ? `${white}` : `${seaFoam}`};
-	// font-family: 'provicali';
+	font-family: 'provicali';
 	font-size: 26px;
 	line-height: 29px;
 	letter-spacing: 0.5px;
