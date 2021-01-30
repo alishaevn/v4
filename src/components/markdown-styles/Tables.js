@@ -4,7 +4,7 @@ import '@fontsource/poppins'
 
 export const Table = styled.table`
     font-family: 'poppins';
-	// color: ${white};
+	color: ${white};
 	font-size: 16px;
 	font-weight: bold;
 `
