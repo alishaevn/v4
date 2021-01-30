@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { white } from '../../utilities/colors'
+import '@fontsource/poppins'
 
 export const Table = styled.table`
     font-family: 'poppins';

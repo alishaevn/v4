@@ -2,18 +2,18 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
 import { coral, seaFoam, white } from '../../utilities/colors'
-import '../../utilities/typography.scss'
+import '@fontsource/poppins'
 
 export const Excerpt = styled.p`
 	color: ${white};
-	// font-family: 'poppins';
+	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
 `
 
 export const Meta = styled.p`
 	color: ${white};
-	// font-family: 'poppins';
+	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { coral, seaFoam } from '../../utilities/colors'
-import '../../utilities/typography.scss'
+import '@fontsource/montserrat'
 
 export const Divider = styled.div`
 	background-color: ${seaFoam};
@@ -12,7 +12,7 @@ export const Divider = styled.div`
 
 export const Title = styled.p`
 	color: ${coral};
-	// font-family: 'montserrat';
+	font-family: 'montserrat';
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
