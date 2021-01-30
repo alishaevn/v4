@@ -5,7 +5,7 @@ import { golden, seaFoam } from '../../utilities/colors'
 
 export const H1 = styled.h1`
 	color: ${golden};
-	font-family: 'hello';
+	// font-family: 'hello';
 	text-align: center;
 	margin-bottom: 0px;
 	font-size: 60px;
@@ -25,7 +25,7 @@ export const SocialIconsWrapper = styled.div`
 
 export const Welcome = styled.p`
 	color: ${seaFoam};
-	font-family: 'provicali';
+	// font-family: 'provicali';
 	letter-spacing: 2px;
 	font-size: 20px;
 	line-height: 24px;

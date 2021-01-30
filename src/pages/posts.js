@@ -1,11 +1,12 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import SEO from 'react-seo-component'
 import BlogPost from '../components/BlogPost'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
-const Posts = ({ data }) => {
+const Posts = () => {
 	const {
 		description,
 		title,
@@ -15,6 +16,42 @@ const Posts = ({ data }) => {
 		siteLocale,
 		twitterUsername,
 	} = useSiteMetadata()
+
+	const posts = useStaticQuery(graphql`
+		query POSTS_QUERY {
+			allMdx(
+				sort: {
+					fields: [ frontmatter___date ],
+					order: DESC,
+				},
+				filter: {
+					frontmatter: {
+						published: { eq: true },
+					},
+				},
+			) {
+				nodes {
+					id
+					excerpt(pruneLength: 250)
+					fields { slug }
+					frontmatter {
+						title
+						date(formatString: "MMMM DD, YYYY")
+						blurb
+						category
+						heroImage {
+							publicURL
+							childImageSharp {
+							sizes(maxWidth: 300, traceSVG: { color: "#639" }) {
+								...GatsbyImageSharpSizes_tracedSVG
+							}
+							}
+						}
+					}
+				}
+			}
+		}
+	`)
 
 	return (
 		<Layout>
@@ -29,7 +66,7 @@ const Posts = ({ data }) => {
 			/>
 			<Header title='blog posts' />
 			<main>
-				{data.allMdx.nodes.map(({ fields, frontmatter, id }) => (
+				{posts.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost
 						fields={fields}
 						frontmatter={frontmatter}

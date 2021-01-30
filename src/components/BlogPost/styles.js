@@ -6,14 +6,14 @@ import '../../utilities/typography.scss'
 
 export const Excerpt = styled.p`
 	color: ${white};
-	font-family: 'poppins';
+	// font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
 `
 
 export const Meta = styled.p`
 	color: ${white};
-	font-family: 'poppins';
+	// font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
 `
@@ -31,7 +31,7 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled.h1`
 	color: ${({ rightAligned }) => rightAligned ? `${white}` : `${seaFoam}`};
-	font-family: 'provicali';
+	// font-family: 'provicali';
 	font-size: 26px;
 	line-height: 29px;
 	letter-spacing: 0.5px;

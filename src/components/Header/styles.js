@@ -12,7 +12,7 @@ export const Divider = styled.div`
 
 export const Title = styled.p`
 	color: ${coral};
-	font-family: 'montserrat';
+	// font-family: 'montserrat';
 	font-size: 20px;
 	letter-spacing: 1px;
 	text-transform: uppercase;

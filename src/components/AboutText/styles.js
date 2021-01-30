@@ -5,7 +5,7 @@ import '../../utilities/typography.scss'
 
 export const Text = styled.p`
 	color: ${white};
-	font-family: 'poppins';
+	// font-family: 'poppins';
 	font-size: 14px;
 	line-height: 18px;
 `
