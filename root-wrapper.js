@@ -1,12 +1,22 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
+import styled from 'styled-components'
 import CodeBlock from './src/components/markdown-styles/CodeBlock'
 import Header1 from './src/components/markdown-styles/Header1'
 import Header2 from './src/components/markdown-styles/Header2'
 import { Paragraph, ParagraphWithInlineCode } from './src/components/markdown-styles/Paragraphs'
 import { Table, TableData, TableHeader, TableRow } from './src/components/markdown-styles/Tables'
 import UnorderedList from './src/components/markdown-styles/UnorderedList'
-import { Main } from './src/utilities/responsive'
+import { eerieBlack } from './src/utilities/colors'
+
+const Main = styled.main`
+	background-color: ${eerieBlack};
+	min-height: 100vh;
+	width: 100vw;
+	margin: -8px;
+	padding: 20px;
+	box-sizing: border-box;
+`
 
 const components = {
 	h1: ({ children }) => <Header1>{children}</Header1>,
