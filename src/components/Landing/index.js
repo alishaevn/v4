@@ -2,16 +2,15 @@ import { Link } from 'gatsby'
 import React from 'react'
 import {
 	H1,
-	SocialIcon,
 	SocialIconsWrapper,
 	Welcome,
 	Wrapper,
 } from './styles'
-import email from '../../../assets/images/email.png'
-import github from '../../../assets/images/github.png'
-import instagram from '../../../assets/images/instagram.png'
-import linkedin from '../../../assets/images/linkedin.png'
-import twitter from '../../../assets/images/twitter.png'
+import Email from '../../../assets/svg/email.svg'
+import Github from '../../../assets/svg/github.svg'
+import Instagram from '../../../assets/svg/instagram.svg'
+import LinkedIn from '../../../assets/svg/linkedin.svg'
+import Twitter from '../../../assets/svg/twitter.svg'
 
 const Landing = () => (
 	<Wrapper>
@@ -23,19 +22,19 @@ const Landing = () => (
 		`}</Welcome>
 		<SocialIconsWrapper>
 			<Link to='/'>
-				<SocialIcon src={linkedin} />
+				<LinkedIn />
 			</Link>
 			<Link to='/'>
-				<SocialIcon src={github} />
+				<Github />
 			</Link>
 			<Link to='/'>
-				<SocialIcon src={instagram} />
+				<Instagram />
 			</Link>
 			<Link to='/'>
-				<SocialIcon src={twitter} />
+				<Twitter />
 			</Link>
 			<Link to='/'>
-				<SocialIcon src={email} />
+				<Email />
 			</Link>
 		</SocialIconsWrapper>
 	</Wrapper>

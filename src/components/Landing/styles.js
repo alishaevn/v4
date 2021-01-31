@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { golden, seaFoam } from '../../utilities/colors'
-// import '../../utilities/typography.scss'
 
 export const H1 = styled.h1`
 	color: ${golden};
@@ -12,15 +11,16 @@ export const H1 = styled.h1`
 	line-height: 45px;
 `
 
-export const SocialIcon = styled.img`
-	height: 20px;
-`
-
 export const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 155px;
 	margin: 35px auto 0;
+
+	svg {
+		height: 20px;
+		width: 20px;
+	}
 `
 
 export const Welcome = styled.p`
