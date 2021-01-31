@@ -61,7 +61,7 @@ export const NavLinks = styled.nav`
 	letter-spacing: 1px;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	justify-content: center;
 	text-align: center;
@@ -69,9 +69,7 @@ export const NavLinks = styled.nav`
 	top: 0;
 	right: 0;
 	transition: transform 300ms;
-	transform: ${({ menuOpen }) =>
-		menuOpen ? 'translateX(0)' : 'translateX(100%)'
-	};
+	transform: ${({ menuOpen }) => menuOpen ? 'translateY(0)' : 'translateY(-100%)'};
 	background-color: ${eerieBlack};
 
 	a {
@@ -83,11 +81,15 @@ export const NavLinks = styled.nav`
 		:hover {
 			color: ${coral};
 			transition: color 300ms;
-			// border-bottom: 2px solid green;
 		}
 	}
 
 	@media ${devices.laptop} { 
 		display: initial;
+
+		a:hover {
+			color: ${coral};
+			transition: color 300ms;
+		}
 	}
 `
