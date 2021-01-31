@@ -11,6 +11,8 @@ export const H1 = styled.h1`
 	line-height: 45px;
 `
 
+export const LinkTo = styled.a``
+
 export const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;

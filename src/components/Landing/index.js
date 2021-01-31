@@ -1,16 +1,16 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import {
-	H1,
-	SocialIconsWrapper,
-	Welcome,
-	Wrapper,
-} from './styles'
 import Email from '../../../assets/svg/email.svg'
 import Github from '../../../assets/svg/github.svg'
 import Instagram from '../../../assets/svg/instagram.svg'
 import LinkedIn from '../../../assets/svg/linkedin.svg'
 import Twitter from '../../../assets/svg/twitter.svg'
+import {
+	H1,
+	LinkTo,
+	SocialIconsWrapper,
+	Welcome,
+	Wrapper,
+} from './styles'
 
 const Landing = () => (
 	<Wrapper>
@@ -21,23 +21,28 @@ const Landing = () => (
 			thanks for stopping by.
 		`}</Welcome>
 		<SocialIconsWrapper>
-			<Link to='/'>
+			<LinkTo href='https://www.linkedin.com/in/alishaevans/' target='_blank'>
 				<LinkedIn />
-			</Link>
-			<Link to='/'>
+			</LinkTo>
+			<LinkTo href='https://github.com/alishaevn' target='_blank'>
 				<Github />
-			</Link>
-			<Link to='/'>
+			</LinkTo>
+			<LinkTo href='https://instagram.com/thatgirlt0nii' target='_blank'>
 				<Instagram />
-			</Link>
-			<Link to='/'>
+			</LinkTo>
+			<LinkTo href='https://twitter.com/thatgirlt0nii' target='_blank'>
 				<Twitter />
-			</Link>
-			<Link to='/'>
+			</LinkTo>
+			<LinkTo href='mailto:alishaevn2@gmail.com'>
 				<Email />
-			</Link>
+			</LinkTo>
 		</SocialIconsWrapper>
 	</Wrapper>
 )
 
 export default Landing
+
+/*
+  Resources:
+  - https://www.gatsbyjs.com/plugins/gatsby-plugin-react-svg/
+ */
