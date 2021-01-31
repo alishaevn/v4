@@ -57,6 +57,8 @@ export const MenuIcon = styled.button`
 `
 
 export const NavLinks = styled.nav`
+	font-family: 'provicali';
+	letter-spacing: 1px;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
