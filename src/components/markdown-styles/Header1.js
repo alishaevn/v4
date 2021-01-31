@@ -8,3 +8,8 @@ const Header1 = styled.h1`
 `
 
 export default Header1
+
+/*
+  Resources:
+  - https://github.com/giteden/mdx-gatsby-demo
+ */

@@ -35,5 +35,5 @@ export const Welcome = styled.p`
 `
 
 export const Wrapper = styled.div`
-	margin-top: 160px;
+	margin-top: 200px;
 `

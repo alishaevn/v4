@@ -23,4 +23,5 @@ export const Title = styled.p`
 export const Wrapper = styled.div`
 	display: flex;
 	align-items: center;
+	margin: 20px 0;
 `

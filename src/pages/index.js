@@ -5,6 +5,7 @@ import BlogPost from '../components/BlogPost'
 import Header from '../components/Header'
 import Landing from '../components/Landing'
 import Layout from '../components/Layout'
+import ProfilePic from '../components/ProfilePic'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const App = () => {
@@ -66,6 +67,10 @@ const App = () => {
 				twitterUsername={twitterUsername}
 			/>
 			<Landing />
+			<ProfilePic
+				marginBottom={50}
+				marginTop={130}
+			/>
 			<Header title='recent posts' />
 			{posts.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 				<BlogPost
@@ -80,3 +85,8 @@ const App = () => {
 }
 
 export default App
+
+/*
+  Resources:
+  - https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsby-and-mdx/
+ */
