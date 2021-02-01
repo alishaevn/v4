@@ -15,9 +15,14 @@ export const TableData = styled.td`
 
 export const TableHeader = styled.th`
 	backgroundColor: 'lightgray';
+	text-align: left;
 `
 
 export const TableRow = styled.tr`
 	display: flex;
 	flex-direction: column;
+
+	th:nth-child(2) {
+		display: none;
+	}
 `
