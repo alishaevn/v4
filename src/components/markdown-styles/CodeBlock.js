@@ -8,6 +8,7 @@ import {
 	LiveProvider,
 } from 'react-live'
 import styled from 'styled-components'
+import { devices } from '../../utilities/devices'
 
 const CodeBlock = ({ codeString, language, ...props }) => {
 	// if 'jsx react-live' is the chosen syntax highlighter
@@ -58,14 +59,25 @@ export const Pre = styled.pre`
 	padding: 0.5em;
 	overflow-x: auto;
 	border-radius: 5px;
-	max-width: 260px;
+	max-width: 80vw;
+	font-family: 'Courier New', Courier, monospace;
 
 	& .token-line {
 		line-height: 1.3em;
 		height: 1.3em;
 	}
 
-	font-family: 'Courier New', Courier, monospace;
+	@media ${devices.tablet} { 
+		width: 600px;
+	}
+
+	@media ${devices.laptop} { 
+		width: 700px;
+	}
+
+	@media ${devices.laptopL} { 
+		width: 34vw;
+	}
 `
 
 export const LineNo = styled.span`
