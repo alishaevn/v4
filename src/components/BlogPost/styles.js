@@ -9,6 +9,10 @@ export const Excerpt = styled.p`
 	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
+
+	@media ${devices.tablet} {
+		font-size: 14px;
+	}
 `
 
 export const Meta = styled.p`
@@ -16,6 +20,10 @@ export const Meta = styled.p`
 	font-family: 'poppins';
 	font-size: 12px;
 	line-height: 15px;
+
+	@media ${devices.tablet} {
+		font-size: 14px;
+	}
 `
 
 export const PostWrapper = styled.div`
@@ -24,11 +32,23 @@ export const PostWrapper = styled.div`
 	border-radius: 5px;
 	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
 	margin: 0 auto 20px;
-	max-width: 330px;
+	${({ rightAligned }) => rightAligned ? '330px' : 'initial'};
 
 	@media ${devices.tablet} {
-		width: 42%;
+		width: ${({ rightAligned }) => rightAligned ? '42%' : '100%'};
 		flex-shrink: 0;
+	}
+
+	@media ${devices.laptop} {
+		width: ${({ rightAligned }) => rightAligned ? '27%' : '100%'};
+		flex-shrink: 0;
+		margin: 0 0 25px;
+		margin: ${({ rightAligned }) => rightAligned ? '0 0 25px' : '0 0 50px'};
+		max-width: ${({ rightAligned }) => rightAligned ? '310px' : 'initial'};
+	}
+
+	@media ${devices.laptopL} {
+		width: ${({ rightAligned }) => rightAligned ? '29%' : '100%'};
 	}
 `
 
@@ -42,4 +62,8 @@ export const Title = styled.h1`
 	font-size: 26px;
 	line-height: 29px;
 	letter-spacing: 0.5px;
+
+	@media ${devices.tablet} {
+		font-size: 31px;
+	}
 `

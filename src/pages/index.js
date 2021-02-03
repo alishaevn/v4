@@ -101,8 +101,17 @@ export default App
 const Wrapper = styled.div`
 	@media ${devices.tablet} { 
 		display: flex;
+		flex-wrap:  wrap;
 		justify-content: space-between;
-		flex-wrap: wrap;
+	}
+
+	@media ${devices.laptopL} { 
+		max-width: 990px;
+
+		::after {
+			content: '';
+			flex: auto;
+		}
 	}
 `
 
