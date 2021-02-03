@@ -38,6 +38,10 @@ export const Title = styled.p`
 	text-transform: uppercase;
 	white-space: nowrap;
 	font-weight: bold;
+
+	@media ${devices.tablet} { 
+		font-size: 35px;
+	}
 `
 
 export const Wrapper = styled.div`

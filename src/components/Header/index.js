@@ -23,3 +23,8 @@ const Header = ({ arrow, title }) => {
 }
 
 export default Header
+
+/*
+  Resources:
+  - https://www.w3schools.com/howto/howto_css_arrows.asp
+ */

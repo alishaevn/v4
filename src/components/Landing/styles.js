@@ -9,6 +9,10 @@ export const H1 = styled.h1`
 	margin-bottom: 0px;
 	font-size: 60px;
 	line-height: 45px;
+
+	@media ${devices.tablet} { 
+		font-size: 130px;
+	}
 `
 
 export const LinkTo = styled.a``
@@ -23,6 +27,15 @@ export const SocialIconsWrapper = styled.div`
 		height: 20px;
 		width: 20px;
 	}
+
+	@media ${devices.tablet} { 
+		width: 310px;
+
+		svg {
+			height: 35px;
+			width: 35px;
+		}
+	}
 `
 
 export const Welcome = styled.p`
@@ -32,6 +45,13 @@ export const Welcome = styled.p`
 	font-size: 20px;
 	line-height: 24px;
 	text-align: center;
+
+	@media ${devices.tablet} {
+		font-size: 35px;
+		line-height: 40px;
+		width: 550px;
+		margin: 60px auto;
+	}
 `
 
 export const Wrapper = styled.div`

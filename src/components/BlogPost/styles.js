@@ -23,6 +23,13 @@ export const PostWrapper = styled.div`
 	padding: ${({ rightAligned }) => rightAligned ? '5px 15px 20px' : '0'};
 	border-radius: 5px;
 	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
+	margin: 0 auto 20px;
+	max-width: 330px;
+
+	@media ${devices.tablet} {
+		width: 42%;
+		flex-shrink: 0;
+	}
 `
 
 export const StyledLink = styled(Link)`
