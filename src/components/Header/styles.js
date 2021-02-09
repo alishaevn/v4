@@ -48,5 +48,10 @@ export const Wrapper = styled.div`
 	display: flex;
 	align-items: center;
 	margin: 20px 0;
-	justify-content: ${({ arrow }) => arrow ? 'flex-end' : 'flex-start'}
+	justify-content: ${({ arrow }) => arrow ? 'flex-end' : 'flex-start'};
+
+	@media ${devices.laptop} {
+		margin-left: auto;
+		margin-right: auto;
+	}
 `

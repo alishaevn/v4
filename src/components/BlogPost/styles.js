@@ -7,22 +7,24 @@ import '@fontsource/poppins'
 export const Excerpt = styled.p`
 	color: ${white};
 	font-family: 'poppins';
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 14px;
+	line-height: 18px;
 
 	@media ${devices.tablet} {
-		font-size: 14px;
+		font-size: 16px;
+		line-height: 26px;
 	}
 `
 
 export const Meta = styled.p`
 	color: ${white};
 	font-family: 'poppins';
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 14px;
+	line-height: 18px;
 
 	@media ${devices.tablet} {
-		font-size: 14px;
+		font-size: 16px;
+		line-height: 26px;
 	}
 `
 
@@ -31,8 +33,7 @@ export const PostWrapper = styled.div`
 	padding: ${({ rightAligned }) => rightAligned ? '5px 15px 20px' : '0'};
 	border-radius: 5px;
 	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
-	margin: 0 auto 20px;
-	${({ rightAligned }) => rightAligned ? '330px' : 'initial'};
+	margin: ${({ rightAligned }) => rightAligned ? '0 auto 20px' : '0 auto 60px'};
 
 	@media ${devices.tablet} {
 		width: ${({ rightAligned }) => rightAligned ? '42%' : '100%'};
@@ -40,11 +41,12 @@ export const PostWrapper = styled.div`
 	}
 
 	@media ${devices.laptop} {
-		width: ${({ rightAligned }) => rightAligned ? '27%' : '100%'};
 		flex-shrink: 0;
 		margin: 0 0 25px;
 		margin: ${({ rightAligned }) => rightAligned ? '0 0 25px' : '0 0 50px'};
-		max-width: ${({ rightAligned }) => rightAligned ? '310px' : 'initial'};
+		max-width: ${({ rightAligned }) => rightAligned ? '310px' : '520px'};
+		margin-left: ${({ rightAligned }) => { if (!rightAligned) return 'auto' }};
+		margin-right: ${({ rightAligned }) => { if (!rightAligned) return 'auto' }};
 	}
 
 	@media ${devices.laptopL} {
