@@ -36,15 +36,15 @@ module.exports = {
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
-			options: { path: `${__dirname}/posts`, name: `posts` },
+			options: { path: `${__dirname}/notes`, name: `notes` },
 		},
 		{
 			resolve: `gatsby-plugin-react-svg`,
 			options: {
-			  rule: {
-				include: /svg/
-			  }
+				rule: {
+					include: /svg/
+				}
 			}
-		  }
+		}
 	],
 }

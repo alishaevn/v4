@@ -22,7 +22,7 @@ const NavBar = () => {
 			<NavLinks menuOpen={menuOpen}>
 				<Link to='/'>home</Link>
 				<Link to='/about'>about</Link>
-				<Link to='/posts'>posts</Link>
+				<Link to='/notes'>notes</Link>
 			</NavLinks>
 		</Navigation>
 	)

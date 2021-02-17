@@ -17,7 +17,7 @@ const Posts = () => {
 		twitterUsername,
 	} = useSiteMetadata()
 
-	const posts = useStaticQuery(graphql`
+	const notes = useStaticQuery(graphql`
 		query POSTS_QUERY {
 			allMdx(
 				sort: {
@@ -64,14 +64,26 @@ const Posts = () => {
 				siteLocale={siteLocale}
 				twitterUsername={twitterUsername}
 			/>
-			<Header title='blog posts' />
+			<Header title='notes' />
 			<main>
-				{posts.allMdx.nodes.map(({ fields, frontmatter, id }) => (
-					<BlogPost
-						fields={fields}
-						frontmatter={frontmatter}
-						id={id}
-					/>
+				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
+					<>
+						<BlogPost
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+						<BlogPost
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+						<BlogPost
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+					</>
 				))}
 			</main>
 		</Layout>
