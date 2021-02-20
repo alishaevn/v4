@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 import { white } from '../../utilities/colors'
-import '@fontsource/poppins'
 
 export const Date = styled.p`
-    font-family: 'poppins';
+    font-family: 'quicksand';
 	color: ${white};
 	font-size: 16px;
 	font-weight: bold;
 `
 
 export const Paragraph = styled.p`
-    font-family: 'poppins';
+    font-family: 'quicksand';
 	color: ${white};
 	font-size: 14px;
 `

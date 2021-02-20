@@ -2,11 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
 import { coral, seaFoam, white } from '../../utilities/colors'
-import '@fontsource/poppins'
 
 export const Excerpt = styled.p`
 	color: ${white};
-	font-family: 'poppins';
+	font-family: 'quicksand';
 	font-size: 14px;
 	line-height: 18px;
 
@@ -18,7 +17,7 @@ export const Excerpt = styled.p`
 
 export const Meta = styled.p`
 	color: ${white};
-	font-family: 'poppins';
+	font-family: 'quicksand';
 	font-size: 14px;
 	line-height: 18px;
 
@@ -60,7 +59,7 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled.h1`
 	color: ${({ rightAligned }) => rightAligned ? `${white}` : `${seaFoam}`};
-	font-family: 'provicali';
+	font-family: 'quicksand';
 	font-size: 26px;
 	line-height: 29px;
 	letter-spacing: 0.5px;

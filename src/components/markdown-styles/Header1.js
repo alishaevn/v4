@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { seaFoam } from '../../utilities/colors'
 
 const Header1 = styled.h1`
-    font-family: 'provicali';
+    font-family: 'quicksand';
     color: ${seaFoam};
     letter-spacing: 0.5px;
 `
