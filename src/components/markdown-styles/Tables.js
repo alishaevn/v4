@@ -10,11 +10,11 @@ export const Table = styled.table`
 `
 
 export const TableData = styled.td`
-	backgroundColor: 'lightgray';
+	background-color: 'lightgray';
 `
 
 export const TableHeader = styled.th`
-	backgroundColor: 'lightgray';
+	background-color: 'lightgray';
 	text-align: left;
 `
 

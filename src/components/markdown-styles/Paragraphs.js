@@ -16,5 +16,5 @@ export const Paragraph = styled.p`
 `
 
 export const ParagraphWithInlineCode = styled.code`
-	backgroundColor: 'lightgray';
+	background-color: 'lightgray';
 `
