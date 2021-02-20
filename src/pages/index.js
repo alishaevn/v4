@@ -10,7 +10,6 @@ import Layout from '../components/Layout'
 import ProfilePic from '../components/ProfilePic'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { devices } from '../utilities/devices'
-import '@fontsource/montserrat'
 
 const App = () => {
 	const {
@@ -78,13 +77,33 @@ const App = () => {
 			<Header title='recent notes' />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
-				<BlogPost
-					rightAligned={true}
-					fields={fields}
-					frontmatter={frontmatter}
-					id={id}
-				/>
-			))}
+					<>
+						<BlogPost
+							rightAligned={true}
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+						<BlogPost
+							rightAligned={true}
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+						<BlogPost
+							rightAligned={true}
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+						<BlogPost
+							rightAligned={true}
+							fields={fields}
+							frontmatter={frontmatter}
+							id={id}
+						/>
+					</>
+				))}
 			</Wrapper>
 			<Link to='/notes'>
 				<Header
@@ -116,6 +135,6 @@ const Wrapper = styled.div`
 `
 
 /*
-  Resources:
-  - https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsby-and-mdx/
+	Resources:
+	- https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsby-and-mdx/
  */
