@@ -13,16 +13,27 @@ export const Excerpt = styled.p`
 		font-size: 16px;
 		line-height: 26px;
 	}
+
+	@media ${devices.laptop} {
+		font-size: ${({ rightAligned }) => rightAligned ? `18px` : `24px`};
+		line-height: ${({ rightAligned }) => rightAligned ? `26px` : `32px`};
+	}
 `
 
 export const Meta = styled.p`
 	color: ${white};
 	font-family: 'quicksand';
 	font-size: 14px;
+	font-weight: 600;
 	line-height: 18px;
 
 	@media ${devices.tablet} {
 		font-size: 16px;
+		line-height: 26px;
+	}
+
+	@media ${devices.laptop} {
+		font-size: ${({ rightAligned }) => rightAligned ? `16px` : `20px`};
 		line-height: 26px;
 	}
 `
@@ -66,5 +77,10 @@ export const Title = styled.h1`
 
 	@media ${devices.tablet} {
 		font-size: 31px;
+	}
+
+	@media ${devices.laptop} {
+		font-size: ${({ rightAligned }) => rightAligned ? `32px` : `40px`};
+		line-height: 35px;
 	}
 `

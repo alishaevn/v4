@@ -16,4 +16,10 @@ export const Text = styled.p`
 		line-height: 26px;
 		max-width: inherit;
 	}
+
+	@media ${devices.laptop} {
+		font-size: 26px;
+		line-height: 38px;
+		max-width: inherit;
+	}
 `
