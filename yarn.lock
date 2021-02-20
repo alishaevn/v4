@@ -1063,6 +1063,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.1.0.tgz#dc250fd1865f92bc2406d38c8cdbc0018e9c0df1"
   integrity sha512-SMvh6J28hegBXFc+oC4dBiFcwnT3NiNo+3s+rzEfHUDewk33TpnqWnf+Phg+bYCdIu77sMQJk2pGN2Q8iiUVjw==
 
+"@fontsource/quicksand@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-4.2.1.tgz#54155b00dc44e9b25ce5f0f258650bc4861d3058"
+  integrity sha512-nWKebyY6J7Nt08CMEiqJzhDMKeKS9iA/ANP936yeH4AzckVvlcmnxvUF2Fe0Kk3ejjtnK9+ZNXcok1RojIUkfg==
+
 "@graphql-tools/batch-execute@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@graphql-tools/batch-execute/-/batch-execute-7.0.0.tgz#e79d11bd5b39f29172f6ec2eafa71103c6a6c85b"
