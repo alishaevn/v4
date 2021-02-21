@@ -5,7 +5,7 @@ import { devices } from '../../utilities/devices'
 export const Table = styled.table`
     font-family: 'quicksand';
 	color: ${white};
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: bold;
 `
 
@@ -21,12 +21,17 @@ export const TableHeader = styled.th`
 export const TableRow = styled.tr`
 	display: flex;
 	flex-direction: column;
+	max-width: 88vw;
 
 	th:nth-child(3) {
 		display: none;
 	}
 
-	@media ${devices.laptopL} { 
+	@media ${devices.mobileL} {
+		width: 88vw;
+		max-width: 500px;
+	}
+
 		display: revert;
 
 		td:nth-child(2),

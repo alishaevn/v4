@@ -59,7 +59,6 @@ export const Pre = styled.pre`
 	padding: 0.5em;
 	overflow-x: auto;
 	border-radius: 5px;
-	max-width: 80vw;
 	font-family: 'Courier New', Courier, monospace;
 
 	& .token-line {

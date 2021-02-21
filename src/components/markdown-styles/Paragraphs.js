@@ -11,8 +11,8 @@ export const Date = styled.p`
 export const Paragraph = styled.p`
     font-family: 'quicksand';
 	color: ${white};
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 16px;
+	line-height: 26px;
 `
 
 export const ParagraphWithInlineCode = styled.code`

@@ -46,6 +46,13 @@ export const Welcome = styled.p`
 	line-height: 24px;
 	text-align: center;
 
+	@media ${devices.mobileL} {
+		font-size: 26px;
+		/* line-height: 40px; */
+		max-width: 400px;
+		margin: 35px auto;
+	}
+
 	@media ${devices.tablet} {
 		font-size: 35px;
 		line-height: 40px;

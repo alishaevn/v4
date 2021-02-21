@@ -6,7 +6,7 @@ import { coral, seaFoam, white } from '../../utilities/colors'
 export const Excerpt = styled.p`
 	color: ${white};
 	font-family: 'quicksand';
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 18px;
 
 	@media ${devices.tablet} {
