@@ -40,10 +40,14 @@ export const Meta = styled.p`
 
 export const PostWrapper = styled.div`
 	background: ${({ rightAligned }) => rightAligned ? `${coral}` : 'transparent'};
-	padding: ${({ rightAligned }) => rightAligned ? '5px 15px 20px' : '0'};
+	padding: ${({ rightAligned }) => rightAligned ? '15px' : '0'};
 	border-radius: 5px;
-	text-align: ${({ rightAligned }) => rightAligned ? 'right' : 'left'};
 	margin: ${({ rightAligned }) => rightAligned ? '0 auto 20px' : '0 auto 60px'};
+
+	@media ${devices.mobileL} {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
 
 	@media ${devices.tablet} {
 		width: ${({ rightAligned }) => rightAligned ? '42%' : '100%'};
