@@ -32,6 +32,11 @@ export const TableRow = styled.tr`
 		max-width: 500px;
 	}
 
+	@media ${devices.tablet} {
+		width: 88vw;
+		max-width: 800px;
+	}
+
 		display: revert;
 
 		td:nth-child(2),

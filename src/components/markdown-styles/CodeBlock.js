@@ -66,10 +66,6 @@ export const Pre = styled.pre`
 		height: 1.3em;
 	}
 
-	@media ${devices.tablet} { 
-		width: 600px;
-	}
-
 	@media ${devices.laptop} { 
 		width: 700px;
 	}

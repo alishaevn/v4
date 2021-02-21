@@ -9,11 +9,6 @@ export const Excerpt = styled.p`
 	font-size: 16px;
 	line-height: 18px;
 
-	@media ${devices.tablet} {
-		font-size: 16px;
-		line-height: 26px;
-	}
-
 	@media ${devices.laptop} {
 		font-size: ${({ rightAligned }) => rightAligned ? `18px` : `24px`};
 		line-height: ${({ rightAligned }) => rightAligned ? `26px` : `32px`};
@@ -50,8 +45,10 @@ export const PostWrapper = styled.div`
 	}
 
 	@media ${devices.tablet} {
-		width: ${({ rightAligned }) => rightAligned ? '42%' : '100%'};
+		width: ${({ rightAligned }) => rightAligned ? '38%' : '100%'};
 		flex-shrink: 0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	@media ${devices.laptop} {

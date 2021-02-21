@@ -17,8 +17,9 @@ export const AppStyles = styled.div`
 		width: 88vw;
 	}
 
-	@media ${devices.tablet} { 
-		width: 85%;
+	@media ${devices.tablet} {
+		width: 88vw;
+		max-width: 800px;
 	}
 
 	@media ${devices.laptop} { 

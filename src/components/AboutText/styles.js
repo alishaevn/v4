@@ -12,8 +12,6 @@ export const Text = styled.p`
 	margin-right: auto;
 
 	@media ${devices.tablet} {
-		font-size: 16px;
-		line-height: 26px;
 		max-width: inherit;
 	}
 

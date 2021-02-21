@@ -48,7 +48,6 @@ export const Welcome = styled.p`
 
 	@media ${devices.mobileL} {
 		font-size: 26px;
-		/* line-height: 40px; */
 		max-width: 400px;
 		margin: 35px auto;
 	}
@@ -58,6 +57,7 @@ export const Welcome = styled.p`
 		line-height: 40px;
 		width: 550px;
 		margin: 60px auto;
+		max-width: initial;
 	}
 `
 
