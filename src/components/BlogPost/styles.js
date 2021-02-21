@@ -10,7 +10,7 @@ export const Excerpt = styled.p`
 	line-height: 18px;
 
 	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `18px` : `24px`};
+		font-size: ${({ rightAligned }) => rightAligned ? `18px` : `21px`};
 		line-height: ${({ rightAligned }) => rightAligned ? `26px` : `32px`};
 	}
 `
@@ -21,6 +21,7 @@ export const Meta = styled.p`
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 18px;
+	margin-top: 0;
 
 	@media ${devices.tablet} {
 		font-size: 16px;
@@ -28,7 +29,7 @@ export const Meta = styled.p`
 	}
 
 	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `16px` : `20px`};
+		font-size: ${({ rightAligned }) => rightAligned ? `16px` : `18px`};
 		line-height: 26px;
 	}
 `
@@ -52,12 +53,7 @@ export const PostWrapper = styled.div`
 	}
 
 	@media ${devices.laptop} {
-		flex-shrink: 0;
-		margin: 0 0 25px;
-		margin: ${({ rightAligned }) => rightAligned ? '0 0 25px' : '0 0 50px'};
-		max-width: ${({ rightAligned }) => rightAligned ? '310px' : '520px'};
-		margin-left: ${({ rightAligned }) => { if (!rightAligned) return 'auto' }};
-		margin-right: ${({ rightAligned }) => { if (!rightAligned) return 'auto' }};
+		width: ${({ rightAligned }) => rightAligned ? '40%' : '100%'};
 	}
 
 	@media ${devices.laptopL} {
@@ -75,13 +71,14 @@ export const Title = styled.h1`
 	font-size: 26px;
 	line-height: 29px;
 	letter-spacing: 0.5px;
+	margin-bottom: 10px;
 
 	@media ${devices.tablet} {
 		font-size: 31px;
 	}
 
 	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `32px` : `40px`};
+		font-size: ${({ rightAligned }) => rightAligned ? `32px` : `36px`};
 		line-height: 35px;
 	}
 `

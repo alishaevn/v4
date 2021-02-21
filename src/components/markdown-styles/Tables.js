@@ -11,11 +11,21 @@ export const Table = styled.table`
 
 export const TableData = styled.td`
 	background-color: 'lightgray';
+
+	@media ${devices.laptop} {
+		:nth-child(2) {
+			font-size: 22px;
+		}
+	}
 `
 
 export const TableHeader = styled.th`
 	background-color: 'lightgray';
 	text-align: left;
+
+	@media ${devices.laptop} {
+		font-size: 22px;
+	}
 `
 
 export const TableRow = styled.tr`

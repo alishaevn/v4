@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { white } from '../../utilities/colors'
+import { devices } from '../../utilities/devices'
 
 const UnorderedList = styled.ul`
     font-family: 'quicksand';
@@ -8,6 +9,10 @@ const UnorderedList = styled.ul`
 
 	li {
 		margin-bottom: 10px;
+	}
+
+	@media ${devices.laptop} {
+		font-size: 18px;
 	}
 `
 
