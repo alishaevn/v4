@@ -7,7 +7,7 @@ category: Dev
 blurb: How to not break your app when large text is enabled
 ---
 
-Allowing your mobile app to maintain a positive user expereince when a user sets their phone to use a larger font size can be tricky. The content that used to fit neatly on their screen, may now flow off screen. If your app isn't set up properly, that may now mean that the user can't see some of the content you'd like them to see.
+Allowing your mobile app to maintain a positive user experience when a user sets their phone to use a larger font size can be tricky. The content that used to fit neatly on their screen, may now flow off screen. If your app isn't set up properly, that may now mean that the user can't see some of the content you'd like them to see.
 
 The way I fixed this problem was by making a custom component using a `KeyboardAvoidingView` and `ScrollView`. This component then wraps your root screen so that all of its capabilities can be passed down.
 
