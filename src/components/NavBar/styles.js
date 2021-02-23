@@ -6,6 +6,10 @@ export const HamburgerMenu = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+
+	@media ${devices.laptop} {
+		display: none;
+	}
 `
 
 export const Logo = styled.img`
@@ -39,26 +43,23 @@ export const MenuIcon = styled.button`
 		transition: opacity 300ms, transform 300ms;
 
 		:first-child {
-			transform: ${({ menuOpen }) =>
-			menuOpen ? 'rotate(45deg)' : 'rotate(0)'};
+			transform: ${({ menuOpen }) => menuOpen ? 'rotate(45deg)' : 'rotate(0)'};
 		}
 
 		:nth-child(2) {
 			opacity: ${({ menuOpen }) => (menuOpen ? '0' : '1')};
-			transform: ${({ menuOpen }) =>
-			menuOpen ? 'translateX(-20px)' : 'translateX(0)'};
+			transform: ${({ menuOpen }) => menuOpen ? 'translateX(-20px)' : 'translateX(0)'};
 		}
 
 		:nth-child(3) {
-			transform: ${({ menuOpen }) =>
-			menuOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+			transform: ${({ menuOpen }) => menuOpen ? 'rotate(-45deg)' : 'rotate(0)'};
 		}
 	}
 `
 
 export const NavLinks = styled.nav`
 	font-family: 'provicali';
-	letter-spacing: 1px;
+	letter-spacing: 1.5px;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -85,11 +86,17 @@ export const NavLinks = styled.nav`
 	}
 
 	@media ${devices.laptop} { 
-		display: initial;
+		transform: translateY(0);
+		font-size: 12px;
+		flex-direction: row;
+		width: 250px;
+		justify-content: space-between;
+		min-height: auto;
+		position: initial;
 
-		a:hover {
-			color: ${coral};
-			transition: color 300ms;
+		a {
+			font-size: 20px;
+			margin-bottom: 0;
 		}
 	}
 `
