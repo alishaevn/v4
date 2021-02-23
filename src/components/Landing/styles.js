@@ -60,7 +60,7 @@ export const Welcome = styled.p`
 		max-width: initial;
 	}
 
-	@media ${devices.tabletM} {
+	@media ${devices.laptopM} {
 		width: 750px;
 	}
 `
