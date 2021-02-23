@@ -70,10 +70,6 @@ const App = () => {
 				twitterUsername={twitterUsername}
 			/>
 			<Landing />
-			<ProfilePic
-				marginBottom={50}
-				marginTop={130}
-			/>
 			<Header title='recent notes' />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
