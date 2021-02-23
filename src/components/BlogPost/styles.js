@@ -53,11 +53,7 @@ export const PostWrapper = styled.div`
 	}
 
 	@media ${devices.laptop} {
-		width: ${({ rightAligned }) => rightAligned ? '40%' : '100%'};
-	}
-
-	@media ${devices.laptopL} {
-		width: ${({ rightAligned }) => rightAligned ? '29%' : '100%'};
+		width: ${({ rightAligned }) => { if (rightAligned) return '40%' }};
 	}
 `
 

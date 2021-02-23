@@ -65,14 +65,6 @@ export const Pre = styled.pre`
 		line-height: 1.3em;
 		height: 1.3em;
 	}
-
-	@media ${devices.laptop} { 
-		width: 700px;
-	}
-
-	@media ${devices.laptopL} { 
-		width: 34vw;
-	}
 `
 
 export const LineNo = styled.span`

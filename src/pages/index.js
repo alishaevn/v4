@@ -123,15 +123,6 @@ const Wrapper = styled.div`
 		flex-wrap:  wrap;
 		justify-content: space-between;
 	}
-
-	@media ${devices.laptopL} { 
-		max-width: 990px;
-
-		::after {
-			content: '';
-			flex: auto;
-		}
-	}
 `
 
 /*

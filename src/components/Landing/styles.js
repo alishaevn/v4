@@ -59,6 +59,10 @@ export const Welcome = styled.p`
 		margin: 60px auto;
 		max-width: initial;
 	}
+
+	@media ${devices.tabletM} {
+		width: 750px;
+	}
 `
 
 export const Wrapper = styled.div`
