@@ -2,6 +2,7 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import Header1 from '../components/markdown-styles/Header1'
+import { Next, Previous } from '../components/markdown-styles/BottomNav'
 import { Date } from '../components/markdown-styles/Paragraphs'
 import Layout from '../components/Layout'
 
@@ -18,7 +19,7 @@ const Post = ({ data, pageContext }) => {
 				<>
 					{previous && (
 						<Link to={previous.fields.slug}>
-							<p>{previous.frontmatter.title}</p>
+							<Previous>{`<< ${previous.frontmatter.title}`}</Previous>
 						</Link>
 					)}
 				</>
@@ -27,7 +28,7 @@ const Post = ({ data, pageContext }) => {
 				<>
 					{next && (
 						<Link to={next.fields.slug}>
-							<p>{next.frontmatter.title}</p>
+							<Next>{`${next.frontmatter.title} >>`}</Next>
 						</Link>
 					)}
 				</>
