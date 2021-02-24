@@ -73,32 +73,12 @@ const App = () => {
 			<Header title='recent notes' />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
-					<>
-						<BlogPost
-							rightAligned={true}
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-						<BlogPost
-							rightAligned={true}
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-						<BlogPost
-							rightAligned={true}
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-						<BlogPost
-							rightAligned={true}
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-					</>
+					<BlogPost
+						rightAligned={true}
+						fields={fields}
+						frontmatter={frontmatter}
+						id={id}
+					/>
 				))}
 			</Wrapper>
 			<Link to='/notes'>

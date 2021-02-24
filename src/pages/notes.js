@@ -67,23 +67,11 @@ const Posts = () => {
 			<Header title='notes' />
 			<main>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
-					<>
-						<BlogPost
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-						<BlogPost
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-						<BlogPost
-							fields={fields}
-							frontmatter={frontmatter}
-							id={id}
-						/>
-					</>
+					<BlogPost
+						fields={fields}
+						frontmatter={frontmatter}
+						id={id}
+					/>
 				))}
 			</main>
 		</Layout>
