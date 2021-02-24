@@ -8,7 +8,9 @@ const NavBar = () => {
 
 	return (
 		<Navigation>
-			<Logo src={logo} />
+			<Link to='/'>
+				<Logo src={logo} />
+			</Link>
 			<HamburgerMenu>
 				<MenuIcon
 					menuOpen={menuOpen}
