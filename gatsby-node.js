@@ -47,7 +47,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 	if (node.internal.type === `Mdx`) {
 		// create the path for the notes
-		const value = `/blog${createFilePath({ node, getNode })}`
+		const value = `/notes${createFilePath({ node, getNode })}`
 
 		createNodeField({
 			name: `slug`,
