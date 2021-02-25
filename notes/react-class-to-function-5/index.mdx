@@ -1,0 +1,94 @@
+---
+title: React Class to Function Pt. 5
+date: 2021-02-12
+published: true
+heroImage: ''
+category: Dev
+blurb: Part 5
+---
+
+# The final picture!
+
+<table>
+
+<tr>
+	<th> Class </th>
+    <th></th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+import React, { Component } from 'react'
+import { Button, TextInput, View } from 'react-native'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { name: '' }
+        this.nameRef = React.createRef()
+    }
+
+	onChange = field => value => this.setState({ [field]: value })
+
+    render() {
+		const { submitText } = this.props
+
+        return (
+            <View>
+                <TextInput
+                    value={name}
+                    ref={this.nameRef}
+                    onChangeText={this.onChange('name')}
+                />
+            </View>
+			<Button text={submitText}/>
+        )
+    }
+}
+
+export default Form
+```
+
+</td>
+<td> Function </td>
+<td>
+
+```js
+import React, { useRef, useState } from 'react'
+import { Button, TextInput, View } from 'react-native'
+
+const Form = ({ submitText }) => {
+    const [name, setName] = useState('')
+    const nameRef = useRef()
+
+    return (
+        <View>
+            <TextInput
+                value={name}
+                ref={nameRef}
+                onChangeText={name => setName(name)}
+            />
+			<Button text={submitText}/>
+        </View>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+export default Form
+```
+
+</td>
+</tr>
+
+</table>

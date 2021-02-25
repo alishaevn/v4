@@ -1,0 +1,75 @@
+---
+title: React Class to Function Pt. 1
+date: 2021-01-15
+published: true
+heroImage: ''
+category: Dev
+blurb: How do you use hooks and where did my lifecycle methods go ??
+---
+
+Recently I was asked to give a presentation on how to convert class components in a React Native app, into functional ones. There's a lot that can be said, but over the next 4 weeks I plan to discuss the 4 areas that I feel are pretty crucial to getting this done. The examples I'll be showing are kept at the bare minimum to demostrate the point, without providing a lot of unneccesary information.
+
+## Declaring the function and props
+- Functional components no longer need the `Component` React import
+- While I prefer using arrow functions for const declarations, it's not mandatory
+- You can destructure props in the argument, or just pass in `props` 
+- Remove the render and enclosing curly braces
+- Destructuring the props in the argument means I don't need a return block
+
+<table>
+
+<tr>
+	<th> Class </th>
+    <th></th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+import React, { Component } from 'react'
+import { Button, View } from 'react-native'
+
+class Form extends Component {
+    render() {
+        const { submitText } = this.props
+
+        return (
+            <View>
+                <Button text={submitText} />
+            </View>
+        )
+    }
+}
+
+export default Form
+```
+
+</td>
+<td> Function </td>
+<td>
+
+```js
+import React from 'react'
+import { Button, View } from 'react-native'
+
+const Form = ({ submitText }) => (
+    <View>
+        <Button text={submitText}/>
+    </View>
+)
+
+
+
+
+
+
+
+export default Form
+```
+
+</td>
+</tr>
+
+</table>

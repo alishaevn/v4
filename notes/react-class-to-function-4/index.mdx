@@ -1,0 +1,88 @@
+---
+title: React Class to Function Pt. 4
+date: 2021-02-05
+published: true
+heroImage: ''
+category: Dev
+blurb: How do you use hooks and where did my lifecycle methods go ??
+---
+
+## Converting helper functions
+- Functions defined outside of the render now need a variable declaration
+- `this.setState({})` is replaced by the `useState` hook
+
+<table>
+
+<tr>
+	<th> Class </th>
+    <th></th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+import React, { Component } from 'react'
+import { View } from 'react-native'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            email: '',
+        }
+    }
+    
+    resetTextFields = () => {
+        this.setState({
+            name: '',
+            email: '',
+        })
+    }
+
+    render() {
+        return <View></View>
+    }
+}
+
+export default Form
+```
+
+</td>
+<td> Function </td>
+<td>
+
+```js
+import React, { useState } from 'react'
+import { View } from 'react-native'
+
+const Form = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+
+    const resetTextFields = () => {
+        setName('')
+        setEmail('')
+    }
+
+    return <View></View>
+}
+
+
+
+
+
+
+
+
+
+
+export default Form
+```
+
+</td>
+</tr>
+
+</table>

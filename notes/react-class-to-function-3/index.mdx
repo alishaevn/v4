@@ -1,0 +1,86 @@
+---
+title: React Class to Function Pt. 3
+date: 2021-01-29
+published: true
+heroImage: ''
+category: Dev
+blurb: How do you use hooks and where did my lifecycle methods go ??
+---
+
+## Converting componentDidMount()
+- Replace the `componentDidMount` lifecycle method with the `useEffect` hook
+- Remember to add the empty brackets as a callback
+- Convert variables declared with `this`, to a `const`
+- If there's a `componentWillUnmount`, add that with a return statement to the `useEffect` hook
+
+<table>
+
+<tr>
+	<th> Class </th>
+    <th></th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+import React, { Component } from 'react'
+import { View } from 'react-native'
+
+class Form extends Component {
+    componentDidMount() {
+        this.keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            this._keyboardDidHide
+        )
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidHide.remove()
+    }
+
+    _keyboardDidHide = () => this.props.scrollDown()
+
+    render() {
+        return <View></View>
+    }
+}
+
+export default Form
+```
+
+</td>
+<td> Function </td>
+<td>
+
+```js
+import React, { useEffect } from 'react'
+import { View } from 'react-native'
+
+const Form = ({ scrollDown, submitText }) => {
+    useEffect(() => {
+        const keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            _keyboardDidHide
+        )
+
+        return () => {
+            keyboardDidHide.remove()
+        }
+    }, [])
+
+    const _keyboardDidHide = () => scrollDown()
+
+    return <View></View>
+}
+
+
+
+export default Form
+```
+
+</td>
+</tr>
+
+</table>

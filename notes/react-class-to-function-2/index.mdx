@@ -1,0 +1,79 @@
+---
+title: React Class to Function Pt. 2
+date: 2021-01-22
+published: true
+heroImage: ''
+category: Dev
+blurb: Part 2
+---
+
+## Removing the constructor
+- Convert variables declared with `this`, to a `const`
+- `useRef` instead of `createRef`
+- No `this.state`, instead we have the `useState` hook
+
+<table>
+
+<tr>
+	<th> Class </th>
+    <th></th>
+	<th> Function </th>
+</tr>
+
+<tr>
+<td>
+
+```js
+import React, { Component } from 'react'
+import { View } from 'react-native'
+
+class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: '',
+            email: '',
+        }
+        this.nameRef = React.createRef()
+        this.emailRef = React.createRef()
+    }
+
+    render() {
+        return <View></View>
+   }
+}
+
+export default Form
+```
+
+</td>
+<td> Function </td>
+<td>
+
+```js
+import React, { useRef, useState } from 'react'
+import { View } from 'react-native'
+
+const Form = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const nameRef = useRef()
+    const emailRef = useRef()
+
+    return <View></View>
+}
+
+
+
+
+
+
+
+
+export default Form
+```
+
+</td>
+</tr>
+
+</table>
