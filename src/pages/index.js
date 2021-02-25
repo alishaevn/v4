@@ -34,6 +34,7 @@ const App = () => {
 						published: { eq: true },
 					},
 				},
+				limit: 6
 			) {
 				nodes {
 					id
