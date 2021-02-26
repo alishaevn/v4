@@ -1,20 +1,19 @@
 import styled from 'styled-components'
 import { golden } from '../../utilities/colors'
+import { devices } from '../../utilities/devices'
 
-export const Next = styled.p`
+export const NoteLink = styled.p`
     font-family: 'quicksand';
 	color: ${golden};
 	font-size: 18px;
 	font-weight: bold;
 	margin-top: 25px;
-	text-align: right;
+	text-align: center;
 `
 
-export const Previous = styled.p`
-    font-family: 'quicksand';
-	color: ${golden};
-	font-size: 18px;
-	font-weight: bold;
-	margin-top: 25px;
-	text-align: left;
+export const Wrapper = styled.div`	
+	@media ${devices.tablet} {
+		display: flex;
+		justify-content: space-between;
+    }
 `

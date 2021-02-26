@@ -8,7 +8,6 @@ import {
 	LiveProvider,
 } from 'react-live'
 import styled from 'styled-components'
-import { devices } from '../../utilities/devices'
 
 const CodeBlock = ({ codeString, language, ...props }) => {
 	// if 'jsx react-live' is the chosen syntax highlighter

@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import Header1 from '../components/markdown-styles/Header1'
-import { Next, Previous } from '../components/markdown-styles/BottomNav'
+import { NoteLink, Wrapper } from '../components/markdown-styles/BottomNav'
 import { Date } from '../components/markdown-styles/Paragraphs'
 import Layout from '../components/Layout'
 
@@ -15,24 +15,18 @@ const Post = ({ data, pageContext }) => {
 			<Header1>{frontmatter.title}</Header1>
 			<Date>{frontmatter.date}</Date>
 			<MDXRenderer>{body}</MDXRenderer>
-			{previous === false ? null : (
-				<>
-					{previous && (
-						<Link to={previous.fields.slug}>
-							<Previous>{`<< ${previous.frontmatter.title}`}</Previous>
-						</Link>
-					)}
-				</>
-			)}
-			{next === false ? null : (
-				<>
-					{next && (
-						<Link to={next.fields.slug}>
-							<Next>{`${next.frontmatter.title} >>`}</Next>
-						</Link>
-					)}
-				</>
-			)}
+			<Wrapper>
+				{previous && (
+					<Link to={previous.fields.slug}>
+						<NoteLink>{`<< ${previous.frontmatter.title}`}</NoteLink>
+					</Link>
+				)}
+				{next && (
+					<Link to={next.fields.slug}>
+						<NoteLink>{`${next.frontmatter.title} >>`}</NoteLink>
+					</Link>
+				)}
+			</Wrapper>
 		</Layout>
 	)
 }
