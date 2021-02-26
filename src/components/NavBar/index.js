@@ -22,9 +22,9 @@ const NavBar = () => {
 				</MenuIcon>
 			</HamburgerMenu>
 			<NavLinks menuOpen={menuOpen}>
-				<Link to='/'>home</Link>
-				<Link to='/about'>about</Link>
-				<Link to='/notes'>notes</Link>
+				<Link to='/' onClick={() => toggleMenuOpen(!menuOpen)}>home</Link>
+				<Link to='/about' onClick={() => toggleMenuOpen(!menuOpen)}>about</Link>
+				<Link to='/notes' onClick={() => toggleMenuOpen(!menuOpen)}>notes</Link>
 			</NavLinks>
 		</Navigation>
 	)
