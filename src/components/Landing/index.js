@@ -15,11 +15,11 @@ import {
 const Landing = () => (
 	<Wrapper>
 		<H1>hello</H1>
-		<Welcome>{`
-				my name is alisha,
-				a software developer with a love for making beautiful web and mobile apps.
-				thanks for stopping by.
-		`}</Welcome>
+		<Welcome>
+			{`my name is alisha,`}<br></br>
+			{`a software developer with a love for making beautiful web and mobile apps.`}<br></br>
+			{`thanks for stopping by.`}
+		</Welcome>
 		<SocialIconsWrapper>
 			<LinkTo href='https://www.linkedin.com/in/alishaevans/' target='_blank'>
 				<LinkedIn />
