@@ -6,7 +6,7 @@ export const H1 = styled.h1`
 	color: ${golden};
 	font-family: 'hello';
 	text-align: center;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 	font-size: 60px;
 	line-height: 45px;
 
@@ -20,12 +20,12 @@ export const LinkTo = styled.a``
 export const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 155px;
+	width: 185px;
 	margin: 35px auto 0;
 
 	svg {
-		height: 20px;
-		width: 20px;
+		height: 30px;
+		width: 30px;
 	}
 
 	@media ${devices.tablet} { 
@@ -43,7 +43,7 @@ export const Welcome = styled.p`
 	font-family: 'provicali';
 	letter-spacing: 2px;
 	font-size: 20px;
-	line-height: 28px;
+	line-height: 26px;
 	text-align: center;
 
 	@media ${devices.mobileL} {
@@ -66,5 +66,5 @@ export const Welcome = styled.p`
 `
 
 export const Wrapper = styled.div`
-	margin-top: 200px;
+	margin-top: 150px;
 `
