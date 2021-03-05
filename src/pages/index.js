@@ -34,7 +34,7 @@ const App = () => {
 						published: { eq: true },
 					},
 				},
-				limit: 6
+				limit: 3,
 			) {
 				nodes {
 					id
@@ -71,11 +71,14 @@ const App = () => {
 				twitterUsername={twitterUsername}
 			/>
 			<Landing />
-			<Header title='recent notes' />
+			<ProfilePic
+				marginBottom={100}
+				marginTop={100}
+			/>
+			<Header title='latest blog posts' />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost
-						rightAligned={true}
 						fields={fields}
 						frontmatter={frontmatter}
 						id={id}
@@ -83,10 +86,7 @@ const App = () => {
 				))}
 			</Wrapper>
 			<Link to='/notes'>
-				<Header
-					title='all notes'
-					arrow={true}
-				/>
+
 			</Link>
 		</Layout>
 	)
