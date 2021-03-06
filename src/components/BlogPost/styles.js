@@ -7,53 +7,37 @@ export const Excerpt = styled.p`
 	color: ${white};
 	font-family: 'quicksand';
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 20px;
 
-	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `18px` : `21px`};
-		line-height: ${({ rightAligned }) => rightAligned ? `26px` : `32px`};
+	@media ${devices.tablet} {
+		font-size: 20px;
+		line-height: 24px;
 	}
 `
 
 export const Meta = styled.p`
 	color: ${white};
 	font-family: 'quicksand';
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 16px;
 	line-height: 18px;
 	margin-top: 0;
 
 	@media ${devices.tablet} {
-		font-size: 16px;
-		line-height: 26px;
-	}
-
-	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `16px` : `18px`};
+		font-size: 20px;
 		line-height: 26px;
 	}
 `
 
 export const PostWrapper = styled.div`
-	background: ${({ rightAligned }) => rightAligned ? `${coral}` : 'transparent'};
-	padding: ${({ rightAligned }) => rightAligned ? '15px' : '0'};
-	border-radius: 5px;
-	margin: ${({ rightAligned }) => rightAligned ? '0 auto 20px' : '0 auto 60px'};
-
-	@media ${devices.mobileL} {
-		padding-left: 35px;
-		padding-right: 35px;
-	}
+	padding: 0;
+	margin-bottom: 40px;
+	border-bottom: 2px solid ${coral};
 
 	@media ${devices.tablet} {
-		width: ${({ rightAligned }) => rightAligned ? '38%' : '100%'};
+		width: 100%;
 		flex-shrink: 0;
 		margin-left: 0;
 		margin-right: 0;
-	}
-
-	@media ${devices.laptop} {
-		width: ${({ rightAligned }) => { if (rightAligned) return '40%' }};
 	}
 `
 
@@ -62,19 +46,16 @@ export const StyledLink = styled(Link)`
 `
 
 export const Title = styled.h1`
-	color: ${({ rightAligned }) => rightAligned ? `${white}` : `${seaFoam}`};
+	color: ${seaFoam};
 	font-family: 'quicksand';
-	font-size: 26px;
-	line-height: 29px;
+	font-size: 28px;
+	line-height: 28px;
 	letter-spacing: 0.5px;
 	margin-bottom: 10px;
+	font-weight: 600;
 
 	@media ${devices.tablet} {
-		font-size: 31px;
-	}
-
-	@media ${devices.laptop} {
-		font-size: ${({ rightAligned }) => rightAligned ? `32px` : `36px`};
-		line-height: 35px;
+		font-size: 36px;
+		line-height: 40px;
 	}
 `

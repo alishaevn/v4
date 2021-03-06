@@ -7,19 +7,31 @@ export const HamburgerMenu = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 
-	@media ${devices.laptop} {
+	@media ${devices.tablet} {
 		display: none;
 	}
 `
 
 export const Logo = styled.img`
-	height: 25px;
+	height: 30px;
+
+	@media ${devices.tablet} {
+		height: 35px;
+	}
 `
 
 export const Navigation = styled.header`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	a {
+		height: 30px;
+
+		@media ${devices.tablet} {
+			height: 35px;
+		}
+	}
 `
 
 export const MenuIcon = styled.button`
@@ -28,9 +40,9 @@ export const MenuIcon = styled.button`
 	border: none;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	height: 2rem;
-	outline: thin-dotted;
+	justify-content: space-between;
+	height: 25px;
+	margin-top: -5px;
 	z-index: 11;
 	padding: 0;
 
@@ -75,7 +87,7 @@ export const NavLinks = styled.nav`
 
 	a {
 		color: ${golden};
-		font-size: 30px;
+		font-size: 20px;
 		text-decoration: none;
 		margin-bottom: 10px;
 
@@ -85,17 +97,17 @@ export const NavLinks = styled.nav`
 		}
 	}
 
-	@media ${devices.laptop} { 
+	@media ${devices.tablet} {
 		transform: translateY(0);
 		font-size: 12px;
 		flex-direction: row;
-		width: 250px;
+		width: 135px;
 		justify-content: space-between;
 		min-height: auto;
 		position: initial;
 
 		a {
-			font-size: 20px;
+			line-height: 35px;
 			margin-bottom: 0;
 		}
 	}

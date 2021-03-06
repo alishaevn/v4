@@ -64,7 +64,7 @@ const Posts = () => {
 				siteLocale={siteLocale}
 				twitterUsername={twitterUsername}
 			/>
-			<Header title='notes' />
+			<Header title='notes' details={true} />
 			<main>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost

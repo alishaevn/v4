@@ -11,11 +11,14 @@ export const H1 = styled.h1`
 	line-height: 45px;
 
 	@media ${devices.tablet} { 
-		font-size: 130px;
+		font-size: 115px;
+		padding-top: 120px;
 	}
 `
 
-export const LinkTo = styled.a``
+export const LinkTo = styled.a`
+	height: 30px;
+`
 
 export const SocialIconsWrapper = styled.div`
 	display: flex;
@@ -46,25 +49,13 @@ export const Welcome = styled.p`
 	line-height: 26px;
 	text-align: center;
 
-	@media ${devices.mobileL} {
-		font-size: 26px;
-		max-width: 400px;
-		margin: 35px auto;
-	}
-
 	@media ${devices.tablet} {
-		font-size: 35px;
-		line-height: 40px;
-		width: 550px;
-		margin: 60px auto;
-		max-width: initial;
-	}
-
-	@media ${devices.laptopM} {
-		width: 750px;
+		font-size: 25px;
+		line-height: 30px;
+		margin: 50px 0;
 	}
 `
 
 export const Wrapper = styled.div`
-	margin-top: 150px;
+	margin-top: 115px;
 `

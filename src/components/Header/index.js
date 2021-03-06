@@ -1,9 +1,14 @@
 import React from 'react'
-import { Title } from './styles'
+import { Details, Title } from './styles'
 
-const Header = ({ title }) => (
-	<Title>{title}</Title>
-)
+const Header = ({ details, title }) => {
+	return (
+		<>
+			<Title>{title}</Title>
+			{details && <Details>Just a bit about what I’ve learned along the way</Details>}
+		</>
+	)
+}
 
 export default Header
 

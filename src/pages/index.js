@@ -72,10 +72,10 @@ const App = () => {
 			/>
 			<Landing />
 			<ProfilePic
-				marginBottom={100}
-				marginTop={100}
+				marginBottom={75}
+				marginTop={75}
 			/>
-			<Header title='latest blog posts' />
+			<Header title='my latest notes' />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost

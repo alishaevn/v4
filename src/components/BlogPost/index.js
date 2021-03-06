@@ -7,10 +7,10 @@ import {
 	Title,
 } from './styles'
 
-const BlogPost = ({ rightAligned, fields, frontmatter, id }) => (
-	<PostWrapper rightAligned={rightAligned} key={id}>
+const BlogPost = ({ fields, frontmatter, id }) => (
+	<PostWrapper key={id}>
 		<StyledLink to={fields.slug}>
-			<Title rightAligned={rightAligned}>
+			<Title>
 				{frontmatter.title}
 			</Title>
 			<Meta>

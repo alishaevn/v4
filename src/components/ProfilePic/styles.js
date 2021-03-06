@@ -12,7 +12,9 @@ export const Img = styled.img`
 	display: block;
 
 	@media ${devices.tablet} { 
-		height: 215px;
-		width: 215px;
+		height: 175px;
+		width: 175px;
+		margin-top: 110px;
+		margin-bottom: 110px;
 	}
 `

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import logo from '../../../assets/images/seafoam_horizontal.png'
+import logo from '../../../assets/images/seafoam_ampersand.png'
 import { HamburgerMenu, Logo, MenuIcon, Navigation, NavLinks } from './styles'
 
 const NavBar = () => {
@@ -23,7 +23,6 @@ const NavBar = () => {
 			</HamburgerMenu>
 			<NavLinks menuOpen={menuOpen}>
 				<Link to='/' onClick={() => toggleMenuOpen(!menuOpen)}>home</Link>
-				<Link to='/about' onClick={() => toggleMenuOpen(!menuOpen)}>about</Link>
 				<Link to='/notes' onClick={() => toggleMenuOpen(!menuOpen)}>notes</Link>
 			</NavLinks>
 		</Navigation>
