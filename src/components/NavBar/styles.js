@@ -12,18 +12,6 @@ export const HamburgerMenu = styled.div`
 	}
 `
 
-export const Logo = styled.img`
-	height: 30px;
-
-	@media ${devices.tablet} {
-		height: 35px;
-	}
-
-	@media ${devices.laptop} {
-		height: 45px;
-	}
-`
-
 export const Navigation = styled.header`
 	display: flex;
 	justify-content: space-between;
