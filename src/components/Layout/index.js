@@ -1,11 +1,13 @@
 import React from 'react'
-import NavBar from '../NavBar/index'
+import Footer from '../Footer'
+import NavBar from '../NavBar'
 import { AppStyles } from './styles'
 
 const Layout = ({ children }) => (
 	<AppStyles>
 		<NavBar />
 		{children}
+		<Footer />
 	</AppStyles>
 )
 
