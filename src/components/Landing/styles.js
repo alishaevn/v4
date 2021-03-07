@@ -16,31 +16,6 @@ export const H1 = styled.h1`
 	}
 `
 
-export const LinkTo = styled.a`
-	height: 30px;
-`
-
-export const SocialIconsWrapper = styled.div`
-	display: flex;
-	justify-content: space-between;
-	width: 185px;
-	margin: 35px auto 0;
-
-	svg {
-		height: 30px;
-		width: 30px;
-	}
-
-	@media ${devices.tablet} { 
-		width: 310px;
-
-		svg {
-			height: 35px;
-			width: 35px;
-		}
-	}
-`
-
 export const Welcome = styled.p`
 	color: ${seaFoam};
 	font-family: 'provicali';
