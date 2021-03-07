@@ -46,12 +46,10 @@ export const Welcome = styled.p`
 	font-family: 'provicali';
 	letter-spacing: 2px;
 	font-size: 20px;
-	line-height: 26px;
 	text-align: center;
 
 	@media ${devices.tablet} {
 		font-size: 25px;
-		line-height: 30px;
 		margin: 50px 0;
 	}
 `

@@ -18,6 +18,10 @@ export const Logo = styled.img`
 	@media ${devices.tablet} {
 		height: 35px;
 	}
+
+	@media ${devices.laptop} {
+		height: 45px;
+	}
 `
 
 export const Navigation = styled.header`
@@ -30,6 +34,12 @@ export const Navigation = styled.header`
 
 		@media ${devices.tablet} {
 			height: 35px;
+		}
+	}
+
+	@media ${devices.laptop} {
+		a {
+			height: 45px;
 		}
 	}
 `
@@ -109,6 +119,12 @@ export const NavLinks = styled.nav`
 		a {
 			line-height: 35px;
 			margin-bottom: 0;
+		}
+	}
+
+	@media ${devices.laptop} {
+		a {
+			line-height: 45px;
 		}
 	}
 `
