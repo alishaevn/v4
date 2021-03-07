@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 import { graphql, useStaticQuery } from 'gatsby'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
@@ -10,6 +10,7 @@ import Layout from '../components/Layout'
 import ProfilePic from '../components/ProfilePic'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { devices } from '../utilities/devices'
+import { coral, seaFoam, white } from '../utilities/colors'
 
 const App = () => {
 	const {
@@ -85,9 +86,9 @@ const App = () => {
 					/>
 				))}
 			</Wrapper>
-			<Link to='/notes'>
-
-			</Link>
+			<Button onClick={() => { navigate('/notes') }}>
+				Blog
+			</Button>
 		</Layout>
 	)
 }
@@ -100,6 +101,17 @@ const Wrapper = styled.div`
 		flex-wrap:  wrap;
 		justify-content: space-between;
 	}
+`
+
+const Button = styled.button`
+	font-family: 'quicksand';
+	color: ${white};
+	background-color: ${coral};
+	padding: 6px 10px;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	float: right;
 `
 
 /*
