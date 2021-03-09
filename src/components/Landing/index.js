@@ -10,7 +10,7 @@ const Landing = () => (
 			{`a software developer with a love for making aesthetically dope web and mobile apps.`}<br></br>
 			{`thanks for stopping by.`}
 		</Welcome>
-		<SocialMediaIcons />
+		<SocialMediaIcons marginTop={35} />
 	</Wrapper>
 )
 

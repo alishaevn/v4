@@ -15,7 +15,7 @@ const Footer = () => {
 				<Copyright>
 					{`©2021. Designed and developed by:`}
 				</Copyright>
-				<Logo src={logo} />
+				<Logo footer={true} src={logo} />
 			</Inline>
 		</Wrapper>
 	)

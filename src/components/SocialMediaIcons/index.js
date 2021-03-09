@@ -7,21 +7,40 @@ import Twitter from '../../../assets/svg/twitter.svg'
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 
-const SocialMediaIcons = () => (
-	<SocialIconsWrapper>
-		<LinkTo href='https://www.linkedin.com/in/alishaevans/' target='_blank'>
+const SocialMediaIcons = ({ footer, marginTop }) => (
+	<SocialIconsWrapper footer={footer} marginTop={marginTop}>
+		<LinkTo
+			href='https://www.linkedin.com/in/alishaevans/'
+			target='_blank'
+			footer={footer}
+		>
 			<LinkedIn />
 		</LinkTo>
-		<LinkTo href='https://github.com/alishaevn' target='_blank'>
+		<LinkTo
+			href='https://github.com/alishaevn'
+			target='_blank'
+			footer={footer}
+		>
 			<Github />
 		</LinkTo>
-		<LinkTo href='https://instagram.com/thatgirlt0nii' target='_blank'>
+		<LinkTo
+			href='https://instagram.com/thatgirlt0nii'
+			target='_blank'
+			footer={footer}
+		>
 			<Instagram />
 		</LinkTo>
-		<LinkTo href='https://twitter.com/thatgirlt0nii' target='_blank'>
+		<LinkTo
+			href='https://twitter.com/thatgirlt0nii'
+			target='_blank'
+			footer={footer}
+		>
 			<Twitter />
 		</LinkTo>
-		<LinkTo href='mailto:alishaevn2@gmail.com'>
+		<LinkTo
+			href='mailto:alishaevn2@gmail.com'
+			footer={footer}
+		>
 			<Email />
 		</LinkTo>
 	</SocialIconsWrapper>
@@ -30,26 +49,24 @@ const SocialMediaIcons = () => (
 export default SocialMediaIcons
 
 const LinkTo = styled.a`
-	height: 30px;
+	height: ${({ footer }) => footer ? `20px` : `30px`};
 `
 
 const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 185px;
-	margin: 35px auto 0;
+	width: ${({ footer }) => footer ? `125px` : `185px`};
+	margin: ${({ footer, marginTop }) => footer ? `${marginTop}px 0 0` : `${marginTop}px auto 0`};
 
 	svg {
-		height: 30px;
-		width: 30px;
+		height: ${({ footer }) => footer ? `20px` : `30px`};
 	}
 
-	@media ${devices.tablet} { 
-		width: 230px;
+	@media ${devices.tablet} {
+		width: ${({ footer }) => { if (!footer) return `230px` }};
 
 		svg {
-			height: 35px;
-			width: 35px;
+			height: ${({ footer }) => { if (!footer) return `35px` }};
 		}
 	}
 `

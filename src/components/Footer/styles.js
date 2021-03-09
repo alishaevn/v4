@@ -6,10 +6,13 @@ export const Copyright = styled.p`
 	color: ${seaFoam};
 	font-family: 'provicali';
 	font-size: 18px;
+	margin-bottom: 5px;
+	margin-top: 0px;
 
-	/* @media ${devices.tablet} { 
-		font-size: 20px;
-	} */
+	@media ${devices.tablet} {
+		margin-bottom: 0;
+		margin-right: 6px;
+	}
 `
 
 export const CTA = styled.p`
@@ -18,25 +21,20 @@ export const CTA = styled.p`
 	font-size: 25px;
 	letter-spacing: 1px;
 	margin-bottom: 0;
-
-	/* @media ${devices.tablet} { 
-		font-size: 20px;
-	} */
 `
 
 export const Inline = styled.div`
-	/* display: flex; */
+	:nth-child(2) {
+		margin-top: 20px;
+	}
 
 	@media ${devices.tablet} { 
-		display: flex;
+		:nth-child(2) {
+			display: flex;
+		}
 	}
 `
 
 export const Wrapper = styled.div`
 	margin: 75px auto 0px;
-	text-align: center;
-
-	/* @media ${devices.tablet} { 
-		font-size: 20px;
-	} */
 `

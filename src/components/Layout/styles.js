@@ -11,7 +11,7 @@ export const AppStyles = styled.div`
 	}
 
 	@media ${devices.tablet} {
-		max-width: 420px;
+		max-width: 425px;
 	}
 
 	@media ${devices.laptop} {
