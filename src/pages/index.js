@@ -87,7 +87,7 @@ const App = () => {
 				))}
 			</Wrapper>
 			<Button onClick={() => { navigate('/notes') }}>
-				Blog
+				{`Blog >>`}
 			</Button>
 		</Layout>
 	)
@@ -111,7 +111,6 @@ const Button = styled.button`
 	font-size: 20px;
 	border: none;
 	border-radius: 5px;
-	float: right;
 `
 
 /*
