@@ -16,10 +16,10 @@ export const Paragraph = styled.p`
 	font-size: 16px;
 	line-height: 26px;
 
-	@media ${devices.laptop} {
+	/* @media ${devices.laptop} {
 		font-size: 20px;
 		line-height: 32px;
-	}
+	} */
 `
 
 export const ParagraphWithInlineCode = styled.code`

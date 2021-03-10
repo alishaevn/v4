@@ -16,7 +16,7 @@ export const TableData = styled.td`
 		}
 	}
 
-	@media ${devices.laptopM} {
+	@media ${devices.laptop} {
 		max-width: 465px;
 	}
 `
@@ -38,17 +38,17 @@ export const TableRow = styled.tr`
 		display: none;
 	}
 
-	@media ${devices.mobileL} {
+	/* @media ${devices.mobileL} {
 		width: 88vw;
 		max-width: 500px;
-	}
+	} */
 
 	@media ${devices.tablet} {
 		width: 88vw;
 		max-width: 800px;
 	}
 
-	@media ${devices.laptopM} {
+	@media ${devices.laptop} {
 		display: revert;
 
 		td:nth-child(2),
