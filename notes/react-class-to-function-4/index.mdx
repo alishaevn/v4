@@ -11,16 +11,7 @@ blurb: How do you use hooks and where did my lifecycle methods go ??
 - Functions defined outside of the render now need a variable declaration
 - `this.setState({})` is replaced by the `useState` hook
 
-<table>
-
-<tr>
-	<th> Class </th>
-    <th></th>
-	<th> Function </th>
-</tr>
-
-<tr>
-<td>
+### Class
 
 ```js
 import React, { Component } from 'react'
@@ -50,9 +41,7 @@ class Form extends Component {
 export default Form
 ```
 
-</td>
-<td> Function </td>
-<td>
+### Function
 
 ```js
 import React, { useState } from 'react'
@@ -70,19 +59,5 @@ const Form = () => {
     return <View></View>
 }
 
-
-
-
-
-
-
-
-
-
 export default Form
 ```
-
-</td>
-</tr>
-
-</table>
