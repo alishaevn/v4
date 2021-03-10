@@ -3,7 +3,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import Header1 from '../components/markdown-styles/Header1'
 import { NoteLink, Wrapper } from '../components/markdown-styles/BottomNav'
-import { Date } from '../components/markdown-styles/Paragraphs'
+import { Date } from '../components/markdown-styles/Paragraph'
 import Layout from '../components/Layout'
 
 const Post = ({ data, pageContext }) => {
