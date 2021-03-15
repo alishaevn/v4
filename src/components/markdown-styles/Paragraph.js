@@ -7,7 +7,7 @@ export const Date = styled.p`
 	color: ${white};
 	font-size: 18px;
 	font-weight: bold;
-	text-transform: uppercase;
+	margin-top: -25px;
 `
 
 export const Paragraph = styled.p`
