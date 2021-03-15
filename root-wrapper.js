@@ -2,8 +2,7 @@ import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import styled from 'styled-components'
 import CodeBlock from './src/components/markdown-styles/CodeBlock'
-import Header1 from './src/components/markdown-styles/Header1'
-import Header2 from './src/components/markdown-styles/Header2'
+import { Header1, Header2, Header3 } from './src/components/markdown-styles/Headers'
 import { Paragraph, ParagraphWithInlineCode } from './src/components/markdown-styles/Paragraph'
 import { Table, TableData, TableHeader, TableRow } from './src/components/markdown-styles/Table'
 import UnorderedList from './src/components/markdown-styles/UnorderedList'
@@ -21,6 +20,7 @@ const Main = styled.main`
 const components = {
 	h1: ({ children }) => <Header1>{children}</Header1>,
 	h2: ({ children }) => <Header2>{children}</Header2>,
+	h3: ({ children }) => <Header3>{children}</Header3>,
 	p: Paragraph,
 	'p.inlineCode': props => <ParagraphWithInlineCode {...props} />,
 	pre: ({ children: { props } }) => {

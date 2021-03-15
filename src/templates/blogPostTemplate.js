@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import Header1 from '../components/markdown-styles/Header1'
+import { Header1 } from '../components/markdown-styles/Headers'
 import { NoteLink, Wrapper } from '../components/markdown-styles/BottomNav'
 import { Date } from '../components/markdown-styles/Paragraph'
 import Layout from '../components/Layout'
