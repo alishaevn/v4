@@ -4,76 +4,78 @@ date: 2021-01-22
 published: true
 heroImage: ''
 category: Dev
-blurb: Part 2
+blurb: Declaring the function and props
 ---
 
-## Removing the constructor
-- Convert variables declared with `this`, to a `const`
-- `useRef` instead of `createRef`
-- No `this.state`, instead we have the `useState` hook
+Hola. :wave:
 
-<table>
-
-<tr>
-	<th> Class </th>
-    <th></th>
-	<th> Function </th>
-</tr>
-
-<tr>
-<td>
+Below is a simplified version of the React class component from part 1 of this series. Today we'll just be going over how to handle the component declaration and the props. Take a look at the class and then continue below.
 
 ```js
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { Button, View } from 'react-native'
 
 class Form extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            name: '',
-            email: '',
-        }
-        this.nameRef = React.createRef()
-        this.emailRef = React.createRef()
-    }
-
     render() {
-        return <View></View>
-   }
+        const { submitText } = this.props
+
+        return (
+            <View>
+                <Button text={submitText} />
+            </View>
+        )
+    }
 }
 
 export default Form
 ```
 
-</td>
-<td> Function </td>
-<td>
+When converting a class component into a functional one, the first thing I like to do is actually declare the component as a function. Brilliant, I know. :grin:
 
+As a class component we needed to import the `Component` class so React knew how to render what we were writing. As a function, that's no longer necessary. We simply declare a function, just like any other function we would write in JavaScript. I typically write my functions, component or otherwise, as anonymous functions using ES6 syntax. For the purposes of this post though, I'll show an example using function declaration as well.
+For now we change lines 1 and 4 from above.
+
+### Anonymous
 ```js
-import React, { useRef, useState } from 'react'
-import { View } from 'react-native'
+import React from 'react'
 
 const Form = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const nameRef = useRef()
-    const emailRef = useRef()
-
-    return <View></View>
+    ...
 }
-
-
-
-
-
-
-
-
-export default Form
 ```
 
-</td>
-</tr>
+### Declaration
+```js
+import React from 'react'
 
-</table>
+function Form() {
+    ...
+}
+```
+
+That part was pretty straightforward. Next, we update our props importing. 
+
+```js
+import React from 'react'
+
+const Form = ({ submitText }) => (
+    ...
+)
+```
+
+Something I'm also a fan of is object destructuring. On line 3 above, I've chosen to destructure my prop of `submitText` instead of importing `props` and having to reference `submitText` later in the component. Although we'll see how to do that too in case that's anyone's preference. We'll also see on lines 3 and 5 that parenthesis are used instead of curly brackets. Functional components don't require a `render` statement and we've just destructured our props as an argument to the function. With that being the case, we can directly return the contents of our function instead of using a return statement inside of curly braces.
+
+If anyone prefers not to destructure the props, the syntax below also works. It looks nearly identical to how it did in the class except there is no `this` being referenced. Using the ES6 fat arrow removes the need to use the `this` keyword. I'm also not wrapping the word "props" in parenthesis. It's just a preferential decision since there's only one argument. Parenthesis can of course be used and if we had multiple arguments, they would be required.
+
+```js
+import React from 'react'
+
+const Form = props => {
+    const { submitText } = props
+    ...
+}
+
+That's it for today! In the next post we'll go over what happened to the constructor.
+
+Practice excellence.
+Be blessed. :upside-down-smiling-face:

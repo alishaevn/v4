@@ -1,44 +1,48 @@
 ---
 title: React Class to Function Pt. 1
 date: 2021-01-15
-published: true
+published: false
 heroImage: ''
 category: Dev
-blurb: How do you use hooks and where did my lifecycle methods go ??
+blurb: ''
 ---
 
-Recently I was asked to give a presentation on how to convert class components in a React Native app, into functional ones. There's a lot that can be said, but over the next 4 weeks I plan to discuss the 4 areas that I feel are pretty crucial to getting this done. The examples I'll be showing are kept at the bare minimum to demostrate the point, without providing a lot of unneccesary information.
+Hola. :wave:
 
-## Declaring the function and props
-- Functional components no longer need the `Component` React import
-- While I prefer using arrow functions for const declarations, it's not mandatory
-- You can destructure props in the argument, or just pass in `props` 
-- Remove the render and enclosing curly braces
-- Destructuring the props in the argument means I don't need a return block
+Below is an example of a React class component that I converted into a React functional component in a React Native app a few weeks ago. Whether it's a React app or React Native app though, the principles would have been the same.
 
-<table>
+For some the below may be enough to go off and convert classes yourself. For anyone who would appreciate a more guided approach though, I'll be breaking down the pieces over the next few posts.
+- Declaring the function and props
+- Removing the constructor
+- Converting common lifecycle methods
+- Converting helper functions
 
-<tr>
-	<th> Class </th>
-    <th></th>
-	<th> Function </th>
-</tr>
-
-<tr>
-<td>
-
+### Class
 ```js
 import React, { Component } from 'react'
-import { Button, View } from 'react-native'
+import { Button, TextInput, View } from 'react-native'
 
 class Form extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { name: '' }
+        this.nameRef = React.createRef()
+    }
+
+	onChange = field => value => this.setState({ [field]: value })
+
     render() {
-        const { submitText } = this.props
+		const { submitText } = this.props
 
         return (
             <View>
-                <Button text={submitText} />
+                <TextInput
+                    value={name}
+                    ref={this.nameRef}
+                    onChangeText={this.onChange('name')}
+                />
             </View>
+			<Button text={submitText}/>
         )
     }
 }
@@ -46,30 +50,30 @@ class Form extends Component {
 export default Form
 ```
 
-</td>
-<td> Function </td>
-<td>
+### Function
 
 ```js
-import React from 'react'
-import { Button, View } from 'react-native'
+import React, { useRef, useState } from 'react'
+import { Button, TextInput, View } from 'react-native'
 
-const Form = ({ submitText }) => (
-    <View>
-        <Button text={submitText}/>
-    </View>
-)
+const Form = ({ submitText }) => {
+    const [name, setName] = useState('')
+    const nameRef = useRef()
 
-
-
-
-
-
+    return (
+        <View>
+            <TextInput
+                value={name}
+                ref={nameRef}
+                onChangeText={name => setName(name)}
+            />
+			<Button text={submitText}/>
+        </View>
+    )
+}
 
 export default Form
 ```
 
-</td>
-</tr>
-
-</table>
+Practice excellence.
+Be blessed. :upside-down-smiling-face:
