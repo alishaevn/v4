@@ -20,16 +20,54 @@ For some the below may be enough to go off and convert classes yourself. For any
 ### Class
 ```js
 import React, { Component } from 'react'
-import { Button, TextInput, View } from 'react-native'
+import { Alert, Button, TextInput, View } from 'react-native'
 
 class Form extends Component {
     constructor(props) {
         super(props)
-        this.state = { name: '' }
+        this.state = {
+            email: '',
+            name: '',
+        }
+        this.emailRef = React.createRef()
         this.nameRef = React.createRef()
     }
 
+    componentDidMount() {
+        this.keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            this._keyboardDidHide
+        )
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidHide.remove()
+    }
+
+    _keyboardDidHide = () => this.props.scrollDown()
+
 	onChange = field => value => this.setState({ [field]: value })
+
+    onSubmitRequest = async () => {
+        const { email, name } = this.state
+
+        if (!name || !email || name.length === 0 || email.length === 0) {
+            return Alert.alert('Please fill in all the fields')
+        }
+
+        Alert.alert(
+            `Got it!`,
+            [{ text: 'OK', onPress: () => resetTextFields() }],
+            { cancelable: false }
+        )
+    }
+
+    resetTextFields = () => {
+        this.setState({
+            name: '',
+            email: '',
+        })
+    }
 
     render() {
 		const { submitText } = this.props
@@ -41,8 +79,16 @@ class Form extends Component {
                     ref={this.nameRef}
                     onChangeText={this.onChange('name')}
                 />
+                <TextInput
+                    value={email}
+                    ref={this.emailRef}
+                    onChangeText={this.onChange('email')}
+                />
+                <Button
+                    text={submitText}
+                    onPress={() => onSubmitRequest()}
+                />
             </View>
-			<Button text={submitText}/>
         )
     }
 }
@@ -53,21 +99,61 @@ export default Form
 ### Function
 
 ```js
-import React, { useRef, useState } from 'react'
-import { Button, TextInput, View } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { Alert, Button, TextInput, View } from 'react-native'
 
-const Form = ({ submitText }) => {
+const Form = ({ scrollDown, submitText }) => {
+    const [email, setEmail] = useState('')
     const [name, setName] = useState('')
+    const emailRef = useRef()
     const nameRef = useRef()
+
+    useEffect(() => {
+        const keyboardDidHide = Keyboard.addListener(
+            'keyboardDidHide',
+            _keyboardDidHide
+        )
+
+        return () => {
+            keyboardDidHide.remove()
+        }
+    }, [])
+
+    const _keyboardDidHide = () => scrollDown()
+
+    const onSubmitRequest = async () => {
+        if (!name || !email || name.length === 0 || email.length === 0) {
+            return Alert.alert('Please fill in all the fields')
+        }
+
+        Alert.alert(
+            `Got it!`,
+            [{ text: 'OK', onPress: () => resetTextFields() }],
+            { cancelable: false }
+        )
+    }
+
+    const resetTextFields = () => {
+        setName('')
+        setEmail('')
+    }
 
     return (
         <View>
+            <TextInput
+                value={email}
+                ref={emailRef}
+                onChangeText={email => setEmail(email)}
+            />
             <TextInput
                 value={name}
                 ref={nameRef}
                 onChangeText={name => setName(name)}
             />
-			<Button text={submitText}/>
+			<Button
+                text={submitText}
+                onPress={() => onSubmitRequest()}
+            />
         </View>
     )
 }

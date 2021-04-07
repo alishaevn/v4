@@ -1,69 +1,79 @@
 ---
 title: React Class to Function Pt. 5
 date: 2021-02-12
-published: false
+published: true
 heroImage: ''
 category: Dev
-blurb: Part 5
+blurb: Converting helper functions
 ---
 
-# The final picture!
+Hola. :wave:
 
-### Class
+What I'm calling "helper functions" are simply the functions written outside of the "render" method, that are called inside the "return" statement. In the class component our Button is calling the "onSubmitRequest" method which sets up the "resetTextFields" function. 
 
 ```js
 import React, { Component } from 'react'
-import { Button, TextInput, View } from 'react-native'
+import { Alert, Button } from 'react-native'
 
 class Form extends Component {
     constructor(props) {
         super(props)
-        this.state = { name: '' }
-        this.nameRef = React.createRef()
+        this.state = {
+            email: '',
+            name: '',
+        }
     }
 
-	onChange = field => value => this.setState({ [field]: value })
-
-    render() {
-		const { submitText } = this.props
-
-        return (
-            <View>
-                <TextInput
-                    value={name}
-                    ref={this.nameRef}
-                    onChangeText={this.onChange('name')}
-                />
-            </View>
-			<Button text={submitText}/>
+    onSubmitRequest = async () => {
+        Alert.alert(
+            `Got it!`,
+            [{ text: 'OK', onPress: () => resetTextFields() }],
+            { cancelable: false }
         )
     }
+    
+    resetTextFields = () => {
+        this.setState({
+            name: '',
+            email: '',
+        })
+    }
+
+    render() {
+        return <Button onPress={() => onSubmitRequest()} />
+    }
 }
 
 export default Form
 ```
 
-### Function
+In the functional component the only real difference, besides changes we've already discussed, is that the helper functions are declared as a const. 
 
 ```js
-import React, { useRef, useState } from 'react'
-import { Button, TextInput, View } from 'react-native'
+import React, { useState } from 'react'
+import { Alert, Button } from 'react-native'
 
-const Form = ({ submitText }) => {
+const Form = () => {
     const [name, setName] = useState('')
-    const nameRef = useRef()
+    const [email, setEmail] = useState('')
 
-    return (
-        <View>
-            <TextInput
-                value={name}
-                ref={nameRef}
-                onChangeText={name => setName(name)}
-            />
-			<Button text={submitText}/>
-        </View>
-    )
+    const onSubmitRequest = async () => {
+        Alert.alert(
+            `Got it!`,
+            [{ text: 'OK', onPress: () => resetTextFields() }],
+            { cancelable: false }
+        )
+    }
+
+    const resetTextFields = () => {
+        setName('')
+        setEmail('')
+    }
+
+    return <Button onPress={() => onSubmitRequest()} />
 }
 
 export default Form
 ```
+
+See you next time. :upside_down_face:
