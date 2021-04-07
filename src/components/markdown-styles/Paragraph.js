@@ -14,7 +14,7 @@ export const Paragraph = styled.p`
     font-family: 'quicksand';
 	color: ${white};
 	font-size: 16px;
-	line-height: 26px;
+	line-height: 30px;
 
 	/* @media ${devices.laptop} {
 		font-size: 20px;
@@ -23,5 +23,6 @@ export const Paragraph = styled.p`
 `
 
 export const ParagraphWithInlineCode = styled.code`
-	background-color: 'lightgray';
+	background-color: rgb(80, 91, 112);
+	padding: 5px;
 `
