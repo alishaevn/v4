@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
+// several of the metadata queries are specific to 'react-seo-component'
 const useSiteMetadata = () => {
 	const { site } = useStaticQuery(
 		graphql`
@@ -7,13 +8,15 @@ const useSiteMetadata = () => {
 				site {
 					siteMetadata {
 						authorName
-						description
-						image
 						siteLanguage
 						siteLocale
 						siteUrl
 						title
-						twitterUsername
+						authorGithub
+						authorTwitterUsername
+						authorLinkedin
+						description
+						siteImage
 					}
 				}
 			}

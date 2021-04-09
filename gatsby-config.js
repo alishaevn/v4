@@ -1,16 +1,7 @@
-const siteMetadata = {
-    authorName: 'Alisha Evans',
-    description: 'Alisha Evans is a Software Engineer currently based in San Diego, CA.',
-    image: '/static/default-image.jpg',
-    siteLanguage: 'en-us',
-    siteLocale: 'en_us',
-    siteUrl: 'https://thelocalhost.blog',
-    title: 'Alisha Evans',
-    twitterUsername: '@thatgirlt0nii',
-}
+const { config } = require('./content/meta/config')
 
 module.exports = {
-    siteMetadata: siteMetadata,
+    siteMetadata: config,
     plugins: [
         'gatsby-plugin-styled-components',
         'gatsby-plugin-sharp',
