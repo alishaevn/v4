@@ -1,6 +1,5 @@
 const { config } = require('./content/meta/config')
-// const emoji = require('remark-emoji')
-// import emoji from 'remark-emoji'
+const emoji = require('remark-emoji')
 
 module.exports = {
     siteMetadata: config,
@@ -13,9 +12,8 @@ module.exports = {
             resolve: 'gatsby-plugin-mdx',
             options: {
                 extensions: ['.mdx', '.md'],
-                // remarkPlugins: [emoji],
+                remarkPlugins: [emoji],
                 gatsbyRemarkPlugins: [
-                    // emoji,
                     {
                         resolve: 'gatsby-remark-images',
                         options: { maxWidth: 590 },
@@ -39,27 +37,6 @@ module.exports = {
                 rule: {
                     include: /svg/
                 }
-            }
-        },
-        {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                plugins: [{
-                    resolve: 'gatsby-remark-emojis',
-                    options: {
-                        active: true, // Deactivate the plugin globally (default: true)
-                        class: 'emoji-icon', // Add a custom css class
-                        size: 16, // Select the size (available size: 16, 24, 32, 64)
-                        styles: { // Add custom styles
-                            display: 'inline',
-                            margin: '0',
-                            'margin-top' : '1px',
-                            position: 'relative',
-                            top: '5px',
-                            width: '25px',
-                        },
-                    }
-                }]
             }
         }
     ],
