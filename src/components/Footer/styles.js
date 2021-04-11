@@ -5,8 +5,8 @@ import '../../utilities/typography.css'
 
 export const Copyright = styled.p`
 	color: ${seaFoam};
-	font-family: 'provicali';
-	font-size: 18px;
+	font-family: 'quicksand';
+	font-size: 20px;
 	margin-bottom: 5px;
 	margin-top: 0px;
 

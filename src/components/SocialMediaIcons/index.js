@@ -49,17 +49,17 @@ const SocialMediaIcons = ({ footer, marginTop }) => (
 export default SocialMediaIcons
 
 const LinkTo = styled.a`
-	height: ${({ footer }) => footer ? `20px` : `30px`};
+	height: 30px;
 `
 
 const SocialIconsWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: ${({ footer }) => footer ? `125px` : `185px`};
+	width: 185px;
 	margin: ${({ footer, marginTop }) => footer ? `${marginTop}px 0 0` : `${marginTop}px auto 0`};
 
 	svg {
-		height: ${({ footer }) => footer ? `20px` : `30px`};
+		height: 30px;
 	}
 
 	@media ${devices.tablet} {
