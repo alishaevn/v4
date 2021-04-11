@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { coral } from '../../utilities/colors'
+import '../../utilities/typography.css'
 
 export const Details = styled.p`
 	color: ${coral};

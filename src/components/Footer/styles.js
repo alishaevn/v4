@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { devices } from '../../utilities/devices'
 import { golden, seaFoam } from '../../utilities/colors'
+import '../../utilities/typography.css'
 
 export const Copyright = styled.p`
 	color: ${seaFoam};

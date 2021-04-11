@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { coral, eerieBlack, golden } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
+import '../../utilities/typography.css'
 
 export const HamburgerMenu = styled.div`
 	display: flex;
