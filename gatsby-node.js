@@ -1,7 +1,7 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const path = require(`path`)
+import { createFilePath } from 'gatsby-source-filesystem'
+import path from 'path'
 
-exports.createPages = ({ actions, graphql }) => {
+export const createPages = ({ actions, graphql }) => {
 	const { createPage } = actions
 	const blogPostTemplate = path.resolve(
 		'src/templates/blogPostTemplate.js'
@@ -42,7 +42,7 @@ exports.createPages = ({ actions, graphql }) => {
 	})
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode = ({ node, actions, getNode }) => {
 	const { createNodeField } = actions
 
 	if (node.internal.type === `Mdx`) {
@@ -57,7 +57,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 	}
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
+export const createSchemaCustomization = ({ actions }) => {
 	const { createTypes } = actions
 
 	createTypes(`

@@ -1,7 +1,9 @@
-const { config } = require('./content/meta/config')
-const emoji = require('remark-emoji')
+// installed esm to allow for the "import" keywords in the config and node files
+// https://github.com/gatsbyjs/gatsby/issues/7810#issuecomment-646866945
+import { config } from './content/meta/config'
+import emoji from 'remark-emoji'
 
-module.exports = {
+export default {
     siteMetadata: config,
     plugins: [
         'gatsby-plugin-styled-components',
