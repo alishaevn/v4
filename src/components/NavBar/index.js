@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import logo from '../../../assets/images/seafoam_ampersand.png'
 import Logo from '../Logo'
 import {
-	HamburgerMenu,
-	MenuIcon,
+	// HamburgerMenu,
+	// MenuIcon,
 	Navigation,
 	NavLinks,
 } from './styles'
