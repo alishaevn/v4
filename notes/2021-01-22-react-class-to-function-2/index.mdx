@@ -3,7 +3,7 @@ title: React Class to Function Pt. 2
 date: 2021-01-22
 published: true
 heroImage: ''
-category: Dev
+category: JavaScript
 blurb: Declaring the function and props
 ---
 
@@ -53,7 +53,7 @@ function Form() {
 }
 ```
 
-That part was pretty straightforward. Next, we update our props importing. "Props" is shorthand for "properties". It's how we pass data from one component to another. In our example, it means that wherever we are rendering the Form component, we passed it a prop of "submitText". It would look something like `<Form submitText='this is some text!' />`. 
+That part was pretty straightforward. Next, we update our props importing. "Props" is shorthand for "properties". It's how we pass data from one component to another. In our example, it means that wherever we are rendering the Form component, we passed it a prop of "submitText". It would look something like `<Form submitText='this is some text!' />`.
 
 Something I'm also a fan of is object destructuring. On line 3 below, I've chosen to destructure my prop of "submitText" instead of importing "props" and having to reference "submitText" later in the component. (Although we'll see how to do that too in case that's anyone's preference.) We'll also see on lines 3 and 5 that parenthesis are used instead of curly brackets after the function is declared. Functional components don't require a "render" statement and we've just destructured our props as an argument to the function. With that being the case, we can directly return the contents of our function instead of using a return statement inside of curly braces.
 
