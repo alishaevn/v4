@@ -3,18 +3,20 @@ import { devices } from '../../utilities/devices'
 
 export const AppStyles = styled.div`
 	margin: 0 auto;
-	padding-bottom: 30px;
-	max-width: 300px;
+	padding: 0px 20px 30px;
 
 	a {
 		text-decoration: none;
 	}
 
 	@media ${devices.tablet} {
-		max-width: 425px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 
 	@media ${devices.laptop} {
-		max-width: 700px;
+		max-width: 900px;
+		padding-left: 80px;
+		padding-right: 80px;
 	}
 `
