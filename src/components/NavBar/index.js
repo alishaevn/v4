@@ -17,7 +17,7 @@ const NavBar = () => {
 			<Link to='/'>
 				<Logo src={logo} />
 			</Link>
-			<HamburgerMenu>
+			{/* <HamburgerMenu>
 				<MenuIcon
 					menuOpen={menuOpen}
 					onClick={() => toggleMenuOpen(!menuOpen)}
@@ -26,7 +26,7 @@ const NavBar = () => {
 					<div />
 					<div />
 				</MenuIcon>
-			</HamburgerMenu>
+			</HamburgerMenu> */}
 			<NavLinks menuOpen={menuOpen}>
 				<Link
 					to='/'
@@ -34,12 +34,12 @@ const NavBar = () => {
 				>
 					home
 				</Link>
-				<Link
+				{/* <Link
 					to='/notes'
 					onClick={() => toggleMenuOpen(!menuOpen)}
 				>
 					notes
-				</Link>
+				</Link> */}
 			</NavLinks>
 		</Navigation>
 	)
