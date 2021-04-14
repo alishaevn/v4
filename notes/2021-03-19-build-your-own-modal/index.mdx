@@ -1,12 +1,136 @@
 ---
-title: Build A Modal With HTML, CSS and JavaScript
+title: Build A Modal From Scratch
 date: 2021-03-19
-published: false
+published: true
 heroImage: ''
 category: Dev
-blurb: 
+blurb: 'Just HTML, CSS and vanilla JavaScript'
 ---
 
 Hola. 👋🏾
+
+While redoing an earlier version of my website, again 😅, I 
+
+### index.js
+```jsx
+const height = window.innerHeight
+const width = window.innerWidth
+
+const dividers = document.querySelectorAll('.divider')
+const sections = document.querySelectorAll('section')
+
+dividers.forEach(divider => divider.style.setProperty('--divider-width', width))
+sections.forEach(section => {
+	section.style.setProperty('--section-height', height)
+	section.style.setProperty('--section-width', width)
+})
+```
+
+### projects.js
+```jsx
+'use strict'
+
+const blackout = document.querySelector('.blackout')
+const body = document.querySelector('body')
+const modalOpenTriggers = document.querySelectorAll('.project-button')
+
+modalOpenTriggers.forEach(trigger => {
+	trigger.addEventListener('click', () => {
+		const { projectButton } = trigger.dataset
+		const popupModal = document.querySelector(`[data-project-modal='${projectButton}']`)
+
+		setModalStyle(projectButton)
+		addClasses(popupModal)
+		
+		popupModal.scrollIntoView()
+    
+		popupModal.querySelector('.popup-modal__close').addEventListener('click', () => removeClasses(popupModal))
+		blackout.addEventListener('click', () => removeClasses(popupModal))
+	})
+})
+
+const setModalStyle = project => {
+	const modalBgImages = document.getElementsByClassName('modal-mock-up')
+	const modalBgImage = [...modalBgImages].find(image => image.classList.contains(`${project}`))
+	const appNames = document.getElementsByClassName('app-name')
+	const appName = [...appNames].find(name => name.classList.contains(`${project}`))
+	const modalBgColors = document.getElementsByClassName('popup-modal')
+	const modalBgColor = [...modalBgColors].find(color => color.classList.contains(`${project}`))
+
+	let image
+	let name
+	let color
+
+	switch(project) {
+		case 'safer':
+			image = 'url(assets/projects/safer-modal.png)'
+			// name = 'var(--scimoTeal)'
+			color = 'var(--saferGreen)'
+	}
+
+	modalBgImage.style['background-image'] = image
+	appName.style.color = name
+	modalBgColor.style['background-color'] = color
+}
+
+
+const addClasses = modal => {
+	modal.classList.add('is--visible')
+	blackout.classList.add('is-blacked-out')
+	body.classList.add('hidden')
+}
+
+const removeClasses = modal => {
+	modal.classList.remove('is--visible')
+	blackout.classList.remove('is-blacked-out')
+	body.classList.remove('hidden')
+}
+```
+
+### index.html
+```jsx
+<!DOCTYPE html>
+<html lang='en'>
+	<body>
+		<main class='container'>
+			<section id='projects'>
+				<aside
+					class='popup-modal safer'
+					data-project-modal='safer'
+				>
+					<div class='popup-modal__close'>
+						X
+					</div>
+					<div class='modal-mock-up safer'></div>
+					<div class='app-details'>
+						<h2 class='app-name safer'>safeR</h2>
+					</div>
+					<p class='app-blurb'>
+						safeR is a React app with a React Native
+						companion, complete with geolocation, that
+						allows users to anonymously report local
+						incidents.
+					</p>
+					<div class='proof-wrapper'>
+						<a
+							href='https://safer.netlify.app/'
+							rel='noopener noreferrer'
+							target='_blank'
+						>
+							<img
+								class='proof'
+								src='./assets/projects/desktop-monitor.svg'
+								alt='safeR website'
+							>
+						</a>
+					</div>
+				</aside>
+			</section>
+		</main>
+	</body>
+	<script src='js/index.js'></script>
+	<script src='js/projects.js'></script>
+</html>
+```
 
 See you next time. 🙃
