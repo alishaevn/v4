@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from 'gatsby'
 import { graphql, useStaticQuery } from 'gatsby'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
@@ -10,7 +9,6 @@ import Layout from '../components/Layout'
 import ProfilePic from '../components/ProfilePic'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { devices } from '../utilities/devices'
-import { coral, seaFoam, white } from '../utilities/colors'
 
 const App = () => {
 	const {
@@ -35,7 +33,6 @@ const App = () => {
 						published: { eq: true },
 					},
 				},
-				limit: 3,
 			) {
 				nodes {
 					id
@@ -76,7 +73,7 @@ const App = () => {
 				marginBottom={75}
 				marginTop={75}
 			/>
-			<Header title='my latest notes' />
+			<Header title='My notes' details={true} />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost
@@ -86,9 +83,6 @@ const App = () => {
 					/>
 				))}
 			</Wrapper>
-			<Button onClick={() => { navigate('/notes') }}>
-				{`Blog >>`}
-			</Button>
 		</Layout>
 	)
 }
@@ -96,21 +90,11 @@ const App = () => {
 export default App
 
 const Wrapper = styled.div`
-	@media ${devices.tablet} { 
+	@media ${devices.tablet} {
 		display: flex;
 		flex-wrap:  wrap;
 		justify-content: space-between;
 	}
-`
-
-const Button = styled.button`
-	font-family: 'quicksand';
-	color: ${white};
-	background-color: ${coral};
-	padding: 6px 10px;
-	font-size: 20px;
-	border: none;
-	border-radius: 5px;
 `
 
 /*
