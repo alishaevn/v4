@@ -45,11 +45,6 @@ const App = () => {
 						category
 						heroImage {
 							publicURL
-							childImageSharp {
-							sizes(maxWidth: 300, traceSVG: { color: "#639" }) {
-								...GatsbyImageSharpSizes_tracedSVG
-							}
-							}
 						}
 					}
 				}
