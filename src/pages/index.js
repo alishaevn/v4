@@ -36,16 +36,13 @@ const App = () => {
 			) {
 				nodes {
 					id
-					excerpt(pruneLength: 250)
+					excerpt(pruneLength: 200)
 					fields { slug }
 					frontmatter {
 						title
 						date(formatString: "MMMM DD, YYYY")
 						blurb
 						category
-						heroImage {
-							publicURL
-						}
 					}
 				}
 			}

@@ -65,7 +65,7 @@ export const createSchemaCustomization = ({ actions }) => {
 			frontmatter: MdxFrontmatter!
 		}
 		type MdxFrontmatter {
-			heroImage: File @fileByRelativePath
+			titleImage: File @fileByRelativePath
 		}
 	`)
 }

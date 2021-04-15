@@ -8,6 +8,7 @@ export default {
     plugins: [
         'gatsby-plugin-styled-components',
         'gatsby-plugin-sharp',
+        'gatsby-plugin-image',
         'gatsby-transformer-sharp',
         'gatsby-plugin-sass',
         {
@@ -31,7 +32,10 @@ export default {
         },
         {
             resolve: 'gatsby-source-filesystem',
-            options: { path: `${__dirname}/notes`, name: 'notes' },
+            options: {
+                name: 'notes',
+                path: `${__dirname}/notes`,
+            },
         },
         {
             resolve: 'gatsby-plugin-react-svg',
