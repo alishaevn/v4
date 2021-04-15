@@ -15,8 +15,3 @@ const Landing = () => (
 )
 
 export default Landing
-
-/*
-	Resources:
-	- https://www.gatsbyjs.com/plugins/gatsby-plugin-react-svg/
- */

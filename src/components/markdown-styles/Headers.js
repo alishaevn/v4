@@ -24,8 +24,3 @@ export const Header3 = styled.h3`
     color: ${white};
     text-transform: uppercase;
 `
-
-/*
-    Resources:
-    - https://github.com/giteden/mdx-gatsby-demo
- */

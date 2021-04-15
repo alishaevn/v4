@@ -88,8 +88,3 @@ const Wrapper = styled.div`
 		justify-content: space-between;
 	}
 `
-
-/*
-	Resources:
-	- https://www.freecodecamp.org/news/build-a-developer-blog-from-scratch-with-gatsby-and-mdx/
- */
