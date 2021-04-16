@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import logo from '../../../assets/images/seafoam_ampersand.png'
 import Logo from '../Logo'
 import {
-	// HamburgerMenu,
-	// MenuIcon,
+	HamburgerMenu,
+	MenuIcon,
 	Navigation,
 	NavLinks,
 } from './styles'
@@ -17,7 +17,7 @@ const NavBar = () => {
 			<Link to='/'>
 				<Logo src={logo} />
 			</Link>
-			{/* <HamburgerMenu>
+			<HamburgerMenu>
 				<MenuIcon
 					menuOpen={menuOpen}
 					onClick={() => toggleMenuOpen(!menuOpen)}
@@ -26,20 +26,20 @@ const NavBar = () => {
 					<div />
 					<div />
 				</MenuIcon>
-			</HamburgerMenu> */}
+			</HamburgerMenu>
 			<NavLinks menuOpen={menuOpen}>
 				<Link
 					to='/'
 					onClick={() => toggleMenuOpen(!menuOpen)}
 				>
-					home
+					blog
 				</Link>
-				{/* <Link
-					to='/notes'
+				<Link
+					to='/about'
 					onClick={() => toggleMenuOpen(!menuOpen)}
 				>
-					notes
-				</Link> */}
+					about
+				</Link>
 			</NavLinks>
 		</Navigation>
 	)

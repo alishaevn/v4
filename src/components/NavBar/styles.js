@@ -3,15 +3,15 @@ import { coral, eerieBlack, golden } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 import '../../utilities/typography.css'
 
-// export const HamburgerMenu = styled.div`
-// 	display: flex;
-// 	justify-content: flex-end;
-// 	align-items: center;
+export const HamburgerMenu = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 
-// 	@media ${devices.tablet} {
-// 		display: none;
-// 	}
-// `
+	@media ${devices.tablet} {
+		display: none;
+	}
+`
 
 export const Navigation = styled.header`
 	display: flex;
@@ -72,17 +72,17 @@ export const NavLinks = styled.nav`
 	font-family: 'provicali';
 	letter-spacing: 1.5px;
 	display: flex;
-	// flex-direction: column;
-	// min-height: 100vh;
-	// width: 100%;
-	// justify-content: center;
-	// text-align: center;
-	// position: absolute;
-	// top: 0;
-	// right: 0;
-	// transition: transform 300ms;
-	// transform: ${({ menuOpen }) => menuOpen ? 'translateY(0)' : 'translateY(-100%)'};
-	// background-color: ${eerieBlack};
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: transform 300ms;
+	transform: ${({ menuOpen }) => menuOpen ? 'translateY(0)' : 'translateY(-100%)'};
+	background-color: ${eerieBlack};
 
 	a {
 		color: ${golden};
