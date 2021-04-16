@@ -10,3 +10,4 @@
 
 #### blog posts
 - https://www.gatsbyjs.com/plugins/gatsby-plugin-image
+- https://www.google.com/search?client=firefox-b-1-d&q=export+higher+quality+image+from+keynote#kpvalbx=_OdB4YNCoI4eJ-gTgjKWoDA17
