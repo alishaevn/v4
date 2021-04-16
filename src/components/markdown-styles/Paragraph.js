@@ -5,21 +5,22 @@ import { devices } from '../../utilities/devices'
 export const Date = styled.p`
     font-family: 'quicksand';
 	color: ${white};
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 	margin-top: -25px;
+	padding-bottom: 15px;
 `
 
 export const Paragraph = styled.p`
     font-family: 'quicksand';
 	color: ${white};
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 30px;
 
-	/* @media ${devices.laptop} {
-		font-size: 20px;
-		line-height: 32px;
-	} */
+	@media ${devices.tablet} {
+		font-size: 21px;
+		line-height: 35px;
+	}
 `
 
 export const ParagraphWithInlineCode = styled.code`
