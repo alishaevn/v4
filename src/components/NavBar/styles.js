@@ -100,7 +100,7 @@ export const NavLinks = styled.nav`
 		transform: translateY(0);
 		font-size: 12px;
 		flex-direction: row;
-		width: 57px;
+		width: 130px;
 		justify-content: space-between;
 		min-height: auto;
 		position: initial;
