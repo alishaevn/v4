@@ -15,16 +15,16 @@ const AboutText = () => (
 		</Text>
 		<Text>
 			On a more personal note:
+			<UnorderedList>
+				<li>Native San Diegan</li>
+				<li>Christian</li>
+				<li>HBCU graduate (#theeILove)</li>
+				<li>Former athlete and coach</li>
+				<li>Logofile (I used to write poetry)</li>
+				<li>Puzzle builder</li>
+				<li>Golden State Warriors fan</li>
+			</UnorderedList>
 		</Text>
-		<UnorderedList>
-			<li>Native San Diegan</li>
-			<li>Christian</li>
-			<li>HBCU graduate (#theeILove)</li>
-			<li>Former athlete and coach</li>
-			<li>Logofile (I used to write poetry)</li>
-			<li>Puzzle builder</li>
-			<li>Golden State Warriors fan</li>
-		</UnorderedList>
 		<Text>
 			If you’d like to chat or just be a part of each other’s networks, reach out to me at any of the platforms below!
 		</Text>
