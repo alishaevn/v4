@@ -3,7 +3,7 @@ import { white } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 
 export const Date = styled.p`
-    font-family: 'quicksand';
+    font-family: 'poppins';
 	color: ${white};
 	font-size: 16px;
 	font-weight: bold;
@@ -12,7 +12,7 @@ export const Date = styled.p`
 `
 
 export const Paragraph = styled.p`
-    font-family: 'quicksand';
+    font-family: 'poppins';
 	color: ${white};
 	font-size: 18px;
 	line-height: 30px;

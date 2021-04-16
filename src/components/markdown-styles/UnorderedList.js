@@ -3,7 +3,7 @@ import { white } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 
 const UnorderedList = styled.ul`
-    font-family: 'quicksand';
+    font-family: 'poppins';
 	color: ${white};
 	font-size: 16px;
 

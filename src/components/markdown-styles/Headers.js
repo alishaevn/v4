@@ -3,7 +3,7 @@ import { seaFoam, white } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 
 export const Header1 = styled.h1`
-    font-family: 'quicksand';
+    font-family: 'poppins';
     color: ${seaFoam};
     letter-spacing: 0.5px;
     font-size: 40px;

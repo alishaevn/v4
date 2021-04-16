@@ -3,7 +3,7 @@ import { white } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 
 export const Table = styled.table`
-    font-family: 'quicksand';
+    font-family: 'poppins';
 	color: ${white};
 	font-size: 18px;
 	font-weight: bold;

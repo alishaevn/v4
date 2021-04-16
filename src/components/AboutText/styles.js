@@ -4,7 +4,7 @@ import { white } from '../../utilities/colors'
 
 export const Text = styled.p`
 	color: ${white};
-	font-family: 'quicksand';
+	font-family: 'poppins';
 	font-size: 16px;
 	line-height: 24px;
 	max-width: 500px;

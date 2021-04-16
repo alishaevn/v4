@@ -5,8 +5,7 @@ import '../../utilities/typography.css'
 
 export const Copyright = styled.p`
 	color: ${seaFoam};
-	font-family: 'quicksand';
-	font-size: 20px;
+	font-family: 'poppins';
 	margin-bottom: 5px;
 	margin-top: 0px;
 

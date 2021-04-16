@@ -3,7 +3,7 @@ import { golden } from '../../utilities/colors'
 import { devices } from '../../utilities/devices'
 
 export const NoteLink = styled.p`
-    font-family: 'quicksand';
+    font-family: 'poppins';
 	color: ${golden};
 	font-size: 18px;
 	font-weight: bold;

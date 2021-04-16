@@ -5,7 +5,7 @@ import '../../utilities/typography.css'
 
 export const Details = styled.p`
 	color: ${coral};
-	font-family: 'quicksand';
+	font-family: 'poppins';
 	margin-top: 0px;
 	margin-bottom: 40px;
 

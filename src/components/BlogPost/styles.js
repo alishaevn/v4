@@ -17,7 +17,7 @@ export const Excerpt = styled.p`
 
 export const Meta = styled.p`
 	color: ${white};
-	font-family: 'quicksand';
+	font-family: 'poppins';
 	font-size: 16px;
 	line-height: 18px;
 	margin-top: 0;
@@ -47,8 +47,7 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled.h1`
 	color: ${seaFoam};
-	font-family: 'quicksand';
-	font-size: 28px;
+	font-family: 'poppins';
 	line-height: 28px;
 	letter-spacing: 0.5px;
 	margin-bottom: 10px;
