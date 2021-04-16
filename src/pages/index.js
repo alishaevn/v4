@@ -6,7 +6,6 @@ import BlogPost from '../components/BlogPost'
 import Header from '../components/Header'
 import Landing from '../components/Landing'
 import Layout from '../components/Layout'
-import ProfilePic from '../components/ProfilePic'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { devices } from '../utilities/devices'
 
@@ -61,11 +60,7 @@ const App = () => {
 				twitterUsername={twitterUsername}
 			/>
 			<Landing />
-			<ProfilePic
-				marginBottom={75}
-				marginTop={75}
-			/>
-			<Header title='My notes' details={true} />
+			<Header title='Blog' details={true} />
 			<Wrapper>
 				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
 					<BlogPost

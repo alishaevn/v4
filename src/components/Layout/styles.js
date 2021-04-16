@@ -3,7 +3,7 @@ import { devices } from '../../utilities/devices'
 
 export const AppStyles = styled.div`
 	margin: 0 auto;
-	padding: 0px 20px 30px;
+	padding: 0px 5px 30px;
 
 	a {
 		text-decoration: none;

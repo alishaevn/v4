@@ -6,6 +6,7 @@ import '../../utilities/typography.css'
 export const Copyright = styled.p`
 	color: ${seaFoam};
 	font-family: 'poppins';
+	font-size: 14px;
 	margin-bottom: 5px;
 	margin-top: 0px;
 
@@ -28,7 +29,7 @@ export const Inline = styled.div`
 		margin-top: 20px;
 	}
 
-	@media ${devices.tablet} { 
+	@media ${devices.tablet} {
 		:nth-child(2) {
 			display: flex;
 		}

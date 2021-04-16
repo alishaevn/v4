@@ -11,7 +11,7 @@ export const H1 = styled.h1`
 	font-size: 60px;
 	line-height: 45px;
 
-	@media ${devices.tablet} { 
+	@media ${devices.tablet} {
 		font-size: 115px;
 		padding-top: 120px;
 	}
@@ -22,7 +22,10 @@ export const Welcome = styled.p`
 	font-family: 'provicali';
 	letter-spacing: 2px;
 	font-size: 20px;
+	line-height: 30px;
 	text-align: center;
+	max-width: 500px;
+	margin: 0 auto;
 
 	@media ${devices.tablet} {
 		font-size: 25px;
@@ -31,5 +34,5 @@ export const Welcome = styled.p`
 `
 
 export const Wrapper = styled.div`
-	margin-top: 115px;
+	margin: 115px 0;
 `

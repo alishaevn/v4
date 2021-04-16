@@ -9,7 +9,7 @@ export const Details = styled.p`
 	margin-top: 0px;
 	margin-bottom: 40px;
 
-	@media ${devices.tablet} { 
+	@media ${devices.tablet} {
 		font-size: 20px;
 	}
 `
@@ -17,14 +17,14 @@ export const Details = styled.p`
 export const Title = styled.p`
 	color: ${coral};
 	font-family: 'provicali';
-	font-size: 30px;
+	font-size: 35px;
 	text-transform: capitalize;
 	white-space: nowrap;
 	font-weight: bold;
 	letter-spacing: 2px;
 	margin-bottom: 0;
 
-	@media ${devices.tablet} { 
+	@media ${devices.tablet} {
 		font-size: 45px;
 	}
 `

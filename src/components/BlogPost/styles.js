@@ -3,11 +3,13 @@ import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
 import { coral, seaFoam, white } from '../../utilities/colors'
 
-export const Excerpt = styled.p`
+export const Blurb = styled.p`
 	color: ${white};
-	font-family: 'quicksand';
-	font-size: 16px;
+	font-family: 'poppins';
+	font-size: 15px;
 	line-height: 20px;
+	letter-spacing: 0.25px;
+	height: 40px;
 
 	@media ${devices.tablet} {
 		font-size: 20px;
@@ -48,8 +50,8 @@ export const StyledLink = styled(Link)`
 export const Title = styled.h1`
 	color: ${seaFoam};
 	font-family: 'poppins';
+	font-size: 25px;
 	line-height: 28px;
-	letter-spacing: 0.5px;
 	margin-bottom: 10px;
 	font-weight: 600;
 

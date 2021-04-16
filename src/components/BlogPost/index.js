@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	Excerpt,
+	Blurb,
 	Meta,
 	PostWrapper,
 	StyledLink,
@@ -16,9 +16,9 @@ const BlogPost = ({ fields, frontmatter, id }) => (
 			<Meta>
 				{frontmatter.date} | {frontmatter.category}
 			</Meta>
-			<Excerpt>
+			<Blurb>
 				{frontmatter.blurb}
-			</Excerpt>
+			</Blurb>
 		</StyledLink>
 	</PostWrapper>
 )

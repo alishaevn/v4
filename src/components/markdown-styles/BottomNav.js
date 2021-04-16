@@ -11,7 +11,7 @@ export const NoteLink = styled.p`
 	text-align: center;
 `
 
-export const Wrapper = styled.div`	
+export const Wrapper = styled.div`
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;

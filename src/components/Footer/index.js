@@ -11,7 +11,7 @@ const Footer = () => {
 			</Inline>
 			<Inline>
 				<Copyright>
-					{`©${new Date().getFullYear()}. Alisha Evans`}
+					{`© ${new Date().getFullYear()} alishaevn. All Rights Reserved.`}
 				</Copyright>
 			</Inline>
 		</Wrapper>
