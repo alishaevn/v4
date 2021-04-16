@@ -6,7 +6,7 @@ export const Text = styled.p`
 	color: ${white};
 	font-family: 'poppins';
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 28px;
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
