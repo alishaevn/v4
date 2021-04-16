@@ -25,11 +25,15 @@ export const Welcome = styled.p`
 	line-height: 30px;
 	text-align: center;
 	max-width: 500px;
-	margin: 0 auto;
+	margin: 50px auto;
 
 	@media ${devices.tablet} {
 		font-size: 25px;
-		margin: 50px 0;
+		max-width: inherit;
+	}
+
+	@media ${devices.laptop} {
+		max-width: 700px;
 	}
 `
 

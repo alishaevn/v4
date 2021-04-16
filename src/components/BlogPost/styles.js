@@ -36,7 +36,7 @@ export const PostWrapper = styled.div`
 	border-bottom: 2px solid ${coral};
 
 	@media ${devices.tablet} {
-		width: 100%;
+		width: 45%;
 		flex-shrink: 0;
 		margin-left: 0;
 		margin-right: 0;
