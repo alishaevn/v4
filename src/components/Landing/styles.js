@@ -40,3 +40,9 @@ export const Welcome = styled.p`
 export const Wrapper = styled.div`
 	margin: 115px 0;
 `
+
+export const poly = {
+	display: 'flex',
+	justifyContent: 'center',
+	paddingTop: 50,
+}

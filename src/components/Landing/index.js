@@ -1,6 +1,6 @@
 import React from 'react'
-import SocialMediaIcons from '../SocialMediaIcons'
-import { H1, Welcome, Wrapper } from './styles'
+import { H1, Welcome, Wrapper, poly } from './styles'
+import PinkPoly from '../../../assets/svg/pink-polygon.svg'
 
 const Landing = () => (
 	<Wrapper>
@@ -9,7 +9,10 @@ const Landing = () => (
 			{`my name is alisha,`}<br></br>
 			{`a software developer with a love for making aesthetically dope web and mobile apps.`}<br></br>
 			{`thanks for stopping by.`}
-		</Welcome>
+			</Welcome >
+			<div style={poly}>
+				<PinkPoly />
+			</div>
 	</Wrapper>
 )
 
