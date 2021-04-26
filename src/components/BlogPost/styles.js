@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
 import { eerieBlack, seaFoam, white } from '../../utilities/colors'
 
-export const Blurb = styled.p`
+export const Excerpt = styled.p`
 	color: ${white};
 	font-family: 'poppins';
 	font-size: 15px;

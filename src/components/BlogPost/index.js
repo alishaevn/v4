@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-	Blurb,
+	Excerpt,
 	Meta,
 	PostWrapper,
 	StyledLink,
@@ -8,20 +8,19 @@ import {
 	Title,
 } from './styles'
 
-const BlogPost = ({ fields, frontmatter, id }) => (
+const BlogPost = ({ excerpt, fields, frontmatter, id }) => (
 	<PostWrapper key={id}>
-
 		<StyledLink to={fields.slug}>
 			<Thumbnail />
 			<Meta>
-				{frontmatter.date} | {frontmatter.category}
+				{frontmatter.date}
 			</Meta>
 			<Title>
 				{frontmatter.title}
 			</Title>
-			<Blurb>
-				{frontmatter.blurb}
-			</Blurb>
+			<Excerpt>
+				{excerpt}
+			</Excerpt>
 		</StyledLink>
 	</PostWrapper>
 )

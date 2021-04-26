@@ -35,7 +35,7 @@ const App = () => {
 			) {
 				nodes {
 					id
-					excerpt(pruneLength: 200)
+					excerpt(pruneLength: 120)
 					fields { slug }
 					frontmatter {
 						title
@@ -62,8 +62,9 @@ const App = () => {
 			<Landing />
 			<Header title='Blog' details={true} />
 			<Wrapper>
-				{notes.allMdx.nodes.map(({ fields, frontmatter, id }) => (
+				{notes.allMdx.nodes.map(({ excerpt, fields, frontmatter, id }) => (
 					<BlogPost
+						excerpt={excerpt.substring(10)}
 						fields={fields}
 						frontmatter={frontmatter}
 						id={id}
