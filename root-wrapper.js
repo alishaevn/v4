@@ -13,7 +13,7 @@ const Main = styled.main`
 	min-height: 100vh;
 	width: 100vw;
 	margin: -8px;
-	padding: 20px;
+	padding: 25px;
 	box-sizing: border-box;
 `
 
