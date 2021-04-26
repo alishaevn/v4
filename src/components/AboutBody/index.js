@@ -1,8 +1,9 @@
 import React from 'react'
-import { Text } from './styles'
+import { ProfilePic, Text } from './styles'
 import UnorderedList from '../markdown-styles/UnorderedList'
+import profile from '../../../assets/images/profile-pic.png'
 
-const AboutText = () => (
+const AboutBody = () => (
 	<>
 		<Text>
 			👩🏾‍💻 Hello again!
@@ -10,6 +11,7 @@ const AboutText = () => (
 		<Text>
 			My name is Alisha Evans. I’m currently a software developer for Notch8, a web and mobile applications consultancy in San Diego, CA. Thorough, easy to follow documentation is one of my core tenets. Aside from writing here, you can find me updating the README on current projects, submitting articles for our organizational playbook or crafting comprehensive PR and ticket comments.
 		</Text>
+		<ProfilePic src={profile} />
 		<Text>
 			Before becoming a developer I worked in technical support while doing occasional freelance work in graphic design and photography. I’ve executed visual brand identities for individuals and companies. I’ve also photographed, culled and edited photos, some of which were used in professional publications. Today the majority of my designing and photography is done on a personal level as a hobby.
 		</Text>
@@ -31,4 +33,4 @@ const AboutText = () => (
 	</>
 )
 
-export default AboutText
+export default AboutBody
