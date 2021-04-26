@@ -4,18 +4,21 @@ import {
 	Meta,
 	PostWrapper,
 	StyledLink,
+	Thumbnail,
 	Title,
 } from './styles'
 
 const BlogPost = ({ fields, frontmatter, id }) => (
 	<PostWrapper key={id}>
+
 		<StyledLink to={fields.slug}>
-			<Title>
-				{frontmatter.title}
-			</Title>
+			<Thumbnail />
 			<Meta>
 				{frontmatter.date} | {frontmatter.category}
 			</Meta>
+			<Title>
+				{frontmatter.title}
+			</Title>
 			<Blurb>
 				{frontmatter.blurb}
 			</Blurb>

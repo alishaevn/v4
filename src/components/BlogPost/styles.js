@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { devices } from '../../utilities/devices'
-import { coral, seaFoam, white } from '../../utilities/colors'
+import { eerieBlack, seaFoam, white } from '../../utilities/colors'
 
 export const Blurb = styled.p`
 	color: ${white};
@@ -10,6 +10,7 @@ export const Blurb = styled.p`
 	line-height: 20px;
 	letter-spacing: 0.25px;
 	height: 40px;
+	margin: 0;
 
 	@media ${devices.tablet} {
 		font-size: 20px;
@@ -20,9 +21,9 @@ export const Blurb = styled.p`
 export const Meta = styled.p`
 	color: ${white};
 	font-family: 'poppins';
-	font-size: 16px;
-	line-height: 18px;
-	margin-top: 0;
+	font-size: 12px;
+	line-height: 15px;
+	margin: 0;
 
 	@media ${devices.tablet} {
 		font-size: 20px;
@@ -32,8 +33,7 @@ export const Meta = styled.p`
 
 export const PostWrapper = styled.div`
 	padding: 0;
-	margin-bottom: 40px;
-	border-bottom: 2px solid ${coral};
+	margin-bottom: 50px;
 
 	@media ${devices.tablet} {
 		width: 45%;
@@ -47,12 +47,21 @@ export const StyledLink = styled(Link)`
 	text-decoration: none;
 `
 
+export const Thumbnail = styled.div`
+	background: linear-gradient(${seaFoam}, ${eerieBlack});
+	height: 155px;
+	width: 100%;
+	margin-bottom: 25px;
+	border-radius: 10px;
+`
+
 export const Title = styled.h1`
 	color: ${seaFoam};
 	font-family: 'poppins';
-	font-size: 25px;
+	font-size: 24px;
+	font-weight: 600;
 	line-height: 28px;
-	margin-bottom: 10px;
+	margin: 10px 0;
 	font-weight: 600;
 
 	@media ${devices.tablet} {
