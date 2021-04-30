@@ -22,13 +22,13 @@ const AboutBody = () => (
 				<li>Christian</li>
 				<li>HBCU graduate (#theeILove)</li>
 				<li>Former athlete and coach</li>
-				<li>Logofile (I used to write poetry)</li>
+				<li>Logophile</li>
 				<li>Puzzle builder</li>
 				<li>Golden State Warriors fan</li>
 			</UnorderedList>
 		</Text>
 		<Text>
-			If you’d like to chat or just be a part of each other’s networks, reach out to me at any of the platforms below!
+			If you’d like to chat or just be a part of each other’s networks, reach out to me on any of my social media platforms!
 		</Text>
 	</>
 )

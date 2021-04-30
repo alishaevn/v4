@@ -6,16 +6,15 @@ export const Date = styled.p`
     font-family: 'poppins';
 	color: ${white};
 	font-size: 16px;
-	font-weight: bold;
-	margin-top: -25px;
-	padding-bottom: 15px;
+	margin-top: 60px;
+	margin-bottom: 0;
 `
 
 export const Paragraph = styled.p`
     font-family: 'poppins';
 	color: ${white};
-	font-size: 18px;
-	line-height: 30px;
+	font-size: 15px;
+	line-height: 25px;
 
 	@media ${devices.tablet} {
 		font-size: 21px;
@@ -24,6 +23,6 @@ export const Paragraph = styled.p`
 `
 
 export const ParagraphWithInlineCode = styled.code`
-	background-color: rgb(80, 91, 112);
-	padding: 5px;
+	background-color: #5E6060;
+	padding: 2px 5px;
 `

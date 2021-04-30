@@ -6,13 +6,17 @@ export const Header1 = styled.h1`
     font-family: 'poppins';
     color: ${seaFoam};
     letter-spacing: 0.5px;
-    font-size: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
 `
 
 export const Header2 = styled.h2`
-    font-family: 'montserrat';
+    font-family: 'provicali';
     color: ${white};
     text-transform: uppercase;
+    font-size: 20px;
+    line-height: 25px;
 
     @media ${devices.laptop} {
         font-size: 30px;
