@@ -15,6 +15,10 @@ export const H1 = styled.h1`
 		font-size: 115px;
 		padding-top: 120px;
 	}
+
+	@media ${devices.xlarge} {
+		font-size: 150px;
+	}
 `
 
 export const Welcome = styled.p`
@@ -35,8 +39,18 @@ export const Welcome = styled.p`
 	@media ${devices.large} {
 		max-width: 700px;
 	}
+
+	@media ${devices.xlarge} {
+		max-width: 800px;
+		font-size: 30px;
+		line-height: 35px;
+	}
 `
 
 export const Wrapper = styled.div`
 	margin: 115px 0;
+
+	@media ${devices.xlarge} {
+		margin: 115px 0 175px
+	}
 `

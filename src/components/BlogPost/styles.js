@@ -16,6 +16,10 @@ export const Excerpt = styled.p`
 		font-size: 20px;
 		line-height: 24px;
 	}
+
+	@media ${devices.xlarge} {
+		height: 140px;
+	}
 `
 
 export const Meta = styled.p`
@@ -40,6 +44,10 @@ export const PostWrapper = styled.div`
 		flex-shrink: 0;
 		margin-left: 0;
 		margin-right: 0;
+	}
+
+	@media ${devices.xlarge} {
+		width: 30%;
 	}
 `
 

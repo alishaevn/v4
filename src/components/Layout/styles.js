@@ -8,10 +8,6 @@ export const AppStyles = styled.div`
 	a {
 		text-decoration: none;
 	}
-
-	@media ${devices.large} {
-		max-width: 900px;
-	}
 `
 
 export const Content = styled.main`
