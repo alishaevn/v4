@@ -9,14 +9,17 @@ export const AppStyles = styled.div`
 		text-decoration: none;
 	}
 
-	@media ${devices.tablet} {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-
 	@media ${devices.laptop} {
 		max-width: 900px;
-		padding-left: 80px;
-		padding-right: 80px;
 	}
+`
+
+export const Content = styled.main`
+	@media ${devices.tablet} {
+		margin-left: 13%;
+	}
+`
+
+export const Page = styled.main`
+	display: flex;
 `

@@ -7,7 +7,7 @@ const Footer = () => {
 		<Wrapper>
 			<Inline>
 				<CTA>{`don't be shy, say hi!`}</CTA>
-				<SocialMediaIcons footer={true} marginTop={10} />
+				<SocialMediaIcons footer={true} />
 			</Inline>
 			<Inline>
 				<Copyright>

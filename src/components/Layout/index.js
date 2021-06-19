@@ -1,13 +1,19 @@
 import React from 'react'
 import Footer from '../Footer'
 import NavBar from '../NavBar'
-import { AppStyles } from './styles'
+import SocialMediaIcons from '../SocialMediaIcons'
+import { AppStyles, Content, Page } from './styles'
 
 const Layout = ({ children }) => (
 	<AppStyles>
 		<NavBar />
-		{children}
-		<Footer />
+		<Page>
+			<SocialMediaIcons footer={false} />
+			<Content>
+				{children}
+				<Footer />
+			</Content>
+		</Page>
 	</AppStyles>
 )
 
