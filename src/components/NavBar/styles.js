@@ -8,7 +8,7 @@ export const HamburgerMenu = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		display: none;
 	}
 `
@@ -21,14 +21,8 @@ export const Navigation = styled.header`
 	a {
 		height: 30px;
 
-		@media ${devices.tablet} {
+		@media ${devices.medium} {
 			height: 35px;
-		}
-	}
-
-	@media ${devices.laptop} {
-		a {
-			height: 45px;
 		}
 	}
 `
@@ -96,7 +90,7 @@ export const NavLinks = styled.nav`
 		}
 	}
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		transform: translateY(0);
 		font-size: 12px;
 		flex-direction: row;
@@ -111,7 +105,7 @@ export const NavLinks = styled.nav`
 		}
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		a {
 			line-height: 45px;
 		}

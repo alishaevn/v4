@@ -10,7 +10,7 @@ export const Copyright = styled.p`
 	margin-bottom: 5px;
 	margin-top: 0px;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		margin-bottom: 0;
 		margin-right: 6px;
 	}
@@ -29,7 +29,7 @@ export const Inline = styled.div`
 		margin-top: 20px;
 	}
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		:nth-child(2) {
 			display: flex;
 		}

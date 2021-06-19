@@ -1,4 +1,5 @@
 export const devices = {
-	tablet: `(min-width: 768px)`,
-	laptop: `(min-width: 900px)`,
+	medium: `(min-width: 768px)`,
+	large: `(min-width: 900px)`,
+	xlarge: `(min-width: 1200px)`,
 }

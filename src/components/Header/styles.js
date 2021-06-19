@@ -9,7 +9,7 @@ export const Details = styled.p`
 	margin-top: 0px;
 	margin-bottom: 40px;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		font-size: 20px;
 	}
 `
@@ -24,7 +24,7 @@ export const Title = styled.p`
 	letter-spacing: 2px;
 	margin-bottom: 0;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		font-size: 45px;
 	}
 `

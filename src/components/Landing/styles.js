@@ -11,7 +11,7 @@ export const H1 = styled.h1`
 	font-size: 60px;
 	line-height: 45px;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		font-size: 115px;
 		padding-top: 120px;
 	}
@@ -27,12 +27,12 @@ export const Welcome = styled.p`
 	max-width: 500px;
 	margin: 50px auto;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		font-size: 25px;
 		max-width: inherit;
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		max-width: 700px;
 	}
 `

@@ -11,7 +11,7 @@ const UnorderedList = styled.ul`
 		margin-bottom: 10px;
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		font-size: 18px;
 	}
 `

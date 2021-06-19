@@ -10,13 +10,13 @@ export const Table = styled.table`
 `
 
 export const TableData = styled.td`
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		:nth-child(2) {
 			font-size: 22px;
 		}
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		max-width: 465px;
 	}
 `
@@ -24,7 +24,7 @@ export const TableData = styled.td`
 export const TableHeader = styled.th`
 	text-align: left;
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		font-size: 22px;
 	}
 `
@@ -43,12 +43,12 @@ export const TableRow = styled.tr`
 		max-width: 500px;
 	} */
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		width: 88vw;
 		max-width: 800px;
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		display: revert;
 
 		td:nth-child(2),

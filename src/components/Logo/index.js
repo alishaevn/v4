@@ -9,13 +9,9 @@ const Logo = ({ footer, src }) => (
 export default Logo
 
 const Image = styled.img`
-	height: ${({ footer }) => footer ? `24px` : `30px`};
+	height: 30px;
 
-	@media ${devices.tablet} {
-		height: ${({ footer }) => { if (!footer) return `35px` }};
-	}
-
-	@media ${devices.laptop} {
-		height: ${({ footer }) => { if (!footer) return `45px` }};
+	@media ${devices.medium} {
+		height: 35px;
 	}
 `

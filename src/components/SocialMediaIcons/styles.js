@@ -4,7 +4,7 @@ import { devices } from '../../utilities/devices'
 export const LinkTo = styled.a`
 	height: 30px;
 
-    @media ${devices.tablet} {
+    @media ${devices.medium} {
         height: 45px;
     }
 `
@@ -20,7 +20,7 @@ export const SocialIconsWrapper = styled.div`
 		height: 30px;
 	}
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
         display: ${({ footer }) => footer ? 'none' : 'flex' };
         margin-top: 0;
         flex-direction: column;

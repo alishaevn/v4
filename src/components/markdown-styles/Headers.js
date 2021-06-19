@@ -18,7 +18,7 @@ export const Header2 = styled.h2`
     font-size: 20px;
     line-height: 25px;
 
-    @media ${devices.laptop} {
+    @media ${devices.large} {
         font-size: 30px;
     }
 `

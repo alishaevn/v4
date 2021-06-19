@@ -12,7 +12,7 @@ export const NoteLink = styled.p`
 `
 
 export const Wrapper = styled.div`
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		display: flex;
 		justify-content: space-between;
     }

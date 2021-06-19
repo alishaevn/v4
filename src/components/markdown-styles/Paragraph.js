@@ -16,7 +16,7 @@ export const Paragraph = styled.p`
 	font-size: 15px;
 	line-height: 25px;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		font-size: 21px;
 		line-height: 35px;
 	}

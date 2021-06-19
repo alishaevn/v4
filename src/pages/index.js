@@ -78,7 +78,7 @@ const App = () => {
 export default App
 
 const Wrapper = styled.div`
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		display: flex;
 		flex-wrap:  wrap;
 		justify-content: space-between;

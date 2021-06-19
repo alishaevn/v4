@@ -9,13 +9,13 @@ export const AppStyles = styled.div`
 		text-decoration: none;
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		max-width: 900px;
 	}
 `
 
 export const Content = styled.main`
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		margin-left: 13%;
 	}
 `

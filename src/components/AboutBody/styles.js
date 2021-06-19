@@ -21,11 +21,11 @@ export const Text = styled.p`
 	max-width: 500px;
 	margin-bottom: 10px;
 
-	@media ${devices.tablet} {
+	@media ${devices.medium} {
 		max-width: inherit;
 	}
 
-	@media ${devices.laptop} {
+	@media ${devices.large} {
 		font-size: 20px;
 		line-height: 40px;
 	}
