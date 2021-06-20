@@ -6,9 +6,9 @@ export const Header1 = styled.h1`
     font-family: 'poppins';
     color: ${seaFoam};
     letter-spacing: 0.5px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 36px;
 `
 
 export const Header2 = styled.h2`

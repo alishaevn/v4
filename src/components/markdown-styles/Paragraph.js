@@ -13,8 +13,8 @@ export const Date = styled.p`
 export const Paragraph = styled.p`
     font-family: 'poppins';
 	color: ${white};
-	font-size: 15px;
-	line-height: 25px;
+	font-size: 16px;
+	line-height: 27px;
 
 	@media ${devices.medium} {
 		font-size: 21px;
