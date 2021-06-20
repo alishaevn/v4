@@ -10,8 +10,11 @@ export const AppStyles = styled.div`
 	}
 `
 
-export const Content = styled.main`
+export const Content = styled.section`
+	max-width: 100%;
+
 	@media ${devices.medium} {
+		max-width: 87%;
 		margin-left: 13%;
 	}
 `
