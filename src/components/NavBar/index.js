@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import logo from '../../../assets/images/seafoam_horizontal.png'
+import logo from '../../../assets/images/golden_horizontal.png'
 import Logo from '../Logo'
 import {
 	HamburgerMenu,
